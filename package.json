@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky install",
-    "check-types": "tsc --noEmit --pretty"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/font": "13.1.6",

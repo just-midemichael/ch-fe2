@@ -42,5 +42,5 @@
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "**/*.cy.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/lib/ToolTip", "commitlint.config.js"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
