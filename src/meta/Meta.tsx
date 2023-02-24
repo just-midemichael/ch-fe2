@@ -7,6 +7,7 @@ import MetaProps from "./Meta.props";
 
 const Meta = (props: MetaProps) => {
   const router = useRouter();
+  console.log("dummy");
 
   return (
     <>
