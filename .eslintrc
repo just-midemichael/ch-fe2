@@ -1,20 +1,31 @@
 {
   // Configuration for JavaScript files
-  "extends": ["airbnb-base", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb-base",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+
   "rules": {
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
+        "singleQuote": false,
         "endOfLine": "auto"
       }
     ]
   },
+
   "overrides": [
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports", "tailwindcss", "simple-import-sort"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "tailwindcss",
+        "simple-import-sort"
+      ],
       "extends": [
         "plugin:tailwindcss/recommended",
         "airbnb-typescript",
@@ -25,13 +36,6 @@
         "project": "./tsconfig.json"
       },
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "singleQuote": true,
-            "endOfLine": "auto"
-          }
-        ],
         "react/destructuring-assignment": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "react/require-default-props": "off",
@@ -43,7 +47,6 @@
         "import/prefer-default-export": "off",
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
-        "@typescript-eslint/no-unused-vars": "off",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",

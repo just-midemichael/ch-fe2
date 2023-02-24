@@ -1,9 +1,10 @@
 import { getRequest } from "@/utils/api/calls";
-import { SomeQueryParams } from "./payload";
+
+import type { SomeQueryParams } from "./payload";
 
 const someGetService = (query: SomeQueryParams) => {
   return getRequest({
-    url: `/someEndpoint?${query.city}`,
+    url: `/someEndpoint?${query.city}`
   });
 };
 

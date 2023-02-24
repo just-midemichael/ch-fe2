@@ -1,10 +1,11 @@
 import { postRequest } from "@/utils/api/calls";
-import { LoginPayload } from "./payload";
+
+import type { LoginPayload } from "./payload";
 
 const login = (data: LoginPayload) => {
   return postRequest({
     url: "/user/login",
-    data,
+    data
   });
 };
 

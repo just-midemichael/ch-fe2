@@ -3,7 +3,7 @@ import axios from "axios";
 import { baseURL } from "../constants";
 
 const baseAxiosMethod = axios.create({
-  baseURL,
+  baseURL
 });
 
 baseAxiosMethod.interceptors.request.use(
