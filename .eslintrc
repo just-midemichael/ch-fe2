@@ -20,12 +20,7 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": [
-        "@typescript-eslint",
-        "unused-imports",
-        "tailwindcss",
-        "simple-import-sort"
-      ],
+      "plugins": ["@typescript-eslint", "unused-imports", "tailwindcss"],
       "extends": [
         "plugin:tailwindcss/recommended",
         "airbnb-typescript",
@@ -45,8 +40,6 @@
         "@typescript-eslint/comma-dangle": "off",
         "@typescript-eslint/consistent-type-imports": "error",
         "import/prefer-default-export": "off",
-        "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",

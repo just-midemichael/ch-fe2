@@ -1,8 +1,9 @@
 import Head from "next/head";
-
+import c from "@/styles/some.js";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+  console.log(c);
   return (
     <>
       <Head>
