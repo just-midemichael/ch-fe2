@@ -1,4 +1,4 @@
-import Hero from "@/components/home/hero/hero";
+import Hero from "@/components/home/hero/Hero";
 import Button from "@/components/shared/button/Button";
 import Meta from "@/components/shared/meta/Meta";
 import Main from "@/layout/main/Main";
