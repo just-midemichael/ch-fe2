@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Meta
         title="Welcome to City Hotels"
-        description="Home page of City Hotels, Nigeris"
+        description="Home page of City Hotels, Nigeria"
       />
 
       <Main>
