@@ -2,14 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Important rules
 
 ```bash
-npm run dev
-# or
+    - Never use any package manager e
+    - Pull request should be scoped to one feature or fix, except in complex features and flows
+    - Commit messages should carry their appropiate flag e.g feat, fix, chore etc /* [git commit -m "feat: added input components"] */
+```
+
+To install project dependencies
+
+```bash
+    yarn or yarn install
+```
+To start the development server
+
+```bash
 yarn dev
-# or
-pnpm dev
 ```
 
 To auto remove linting errors use
