@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Important rules
 
 ```bash
-    - Never use any package manager e
+    - Never use NPM, PNPM etc. Only YARN.
     - Pull request should be scoped to one feature or fix, except in complex features and flows
     - Commit messages should carry their appropiate flag e.g feat, fix, chore etc /* [git commit -m "feat: added input components"] */
 ```
