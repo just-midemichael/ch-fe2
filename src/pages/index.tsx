@@ -2,6 +2,7 @@ import Hero from "@/components/home/hero/Hero";
 import Button from "@/components/shared/button/Button";
 import Meta from "@/components/shared/meta/Meta";
 import Main from "@/layout/main/Main";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -14,9 +15,21 @@ export default function Home() {
       <Main>
         <div className="absolute top-1/2 left-1/2 w-max -translate-x-1/2 -translate-y-1/2">
           <Hero />
-          <div className="my-4">
-            <Button className="mx-auto hover:bg-black hover:text-white">
+          <div className="my-4 flex gap-x-2.5">
+            <Button size="sm" color="primary">
               Explore
+            </Button>
+
+            <Button size="md" color="primary">
+              Explore
+            </Button>
+
+            <Button size="lg" color="danger-outline">
+              Explore
+            </Button>
+
+            <Button size="media" color="media">
+              <FaFacebookF />
             </Button>
           </div>
         </div>
