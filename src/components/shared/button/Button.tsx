@@ -1,25 +1,23 @@
 import type { FC, PropsWithChildren } from "react";
 import styles from "./Button.module.scss";
 import type ButtonProps from "./Button.props";
-import match from "../../../utils/match"
-
+import match from "../../../utils/match";
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
-  size = '',
-  color = '',
+  size = "",
+  color = "",
   children,
   className,
   ...rest
 }) => {
- 
-  const buttonSize = match( size, {
+  const buttonSize = match(size, {
     sm: styles.size__small,
     md: styles.size__md,
     lg: styles.size__lg,
     subscribe: styles.size__subscribe,
     media: styles.size__media,
-    default: ''
-  })
+    default: ""
+  });
 
   const variant = match(color, {
     primary: styles.variants__primary,
@@ -27,8 +25,8 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     neutral: styles.variants__neutral,
     danger: styles.variants__danger,
     media: styles.variants__media,
-    default: ''
-  })
+    default: ""
+  });
 
   return (
     <button
@@ -40,9 +38,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
     `}
       {...rest}
     >
-      
-        <>{children}</>
-  
+      <>{children}</>
     </button>
   );
 };

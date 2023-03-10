@@ -1,12 +1,11 @@
 const match = (
-    option: string,
-    options: {
-        default: string;
-        [key: string]: string | undefined;
-    }  
-    ) => {
-        return options[option] || options.default
-    }
+  option: string,
+  options: {
+    default: string;
+    [key: string]: string | undefined;
+  }
+) => {
+  return options[option] || options.default;
+};
 
-
- export default match;
+export default match;
