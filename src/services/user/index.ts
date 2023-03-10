@@ -1,20 +1,17 @@
 import { getRequest, postRequest } from "@/utils/api/calls";
-import { UpdateUserPayload } from "./payload";
+import { UserPayload } from "./payload";
 
 const getProfile = () => {
   return getRequest({
-    url: "/user",
+    url: "/user"
   });
 };
 
-const updateProfile = (data: UpdateUserPayload) => {
+const updateProfile = (data: UserPayload) => {
   return postRequest({
     url: "/user",
     data
   });
 };
 
-
-
-export { getProfile, updateProfile};
-
+export { getProfile, updateProfile };
