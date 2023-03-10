@@ -1,4 +1,4 @@
-import { getRequest, postRequest } from "@/utils/api/calls";
+import { getRequest, postRequest } from "../../utils/api/calls";
 import { UserPayload } from "./payload";
 
 const getProfile = () => {

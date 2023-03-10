@@ -1,27 +1,27 @@
-import { getRequest } from "@/utils/api/calls";
+import { getRequest } from "../../utils/api/calls";
 
 const getTopRooms = () => {
   return getRequest({
-    url: "/rooms/search",
+    url: "/rooms/search"
   });
 };
 
-const getRooms = (data:any) => {
-  let args = Object.keys(data)
-  .map((item) => `${item}=${data[item]}`)
-  .join("&");
+const getRooms = (data: any) => {
+  const args = Object.keys(data)
+    .map(
+      (item) => `${encodeURIComponent(item)}=${encodeURIComponent(data[item])}`
+    )
+    .join("&");
 
   return getRequest({
-    url: `/rooms/search?${args}`,
+    url: `/rooms/search?${args}`
   });
 };
 
-const getRoom = (roomId:string) => {
+const getRoom = (roomId: string) => {
   return getRequest({
-    url: `rooms/${roomId}`,
+    url: `rooms/${roomId}`
   });
 };
 
-export {getTopRooms ,getRooms,getRoom};
-
-
+export { getTopRooms, getRooms, getRoom };

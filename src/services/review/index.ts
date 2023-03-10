@@ -1,4 +1,4 @@
-import { getRequest, postRequest } from "@/utils/api/calls";
+import { getRequest, postRequest } from "../../utils/api/calls";
 import { ReviewPayload } from "./payload";
 
 const addReview = (data: ReviewPayload) => {
@@ -10,9 +10,8 @@ const addReview = (data: ReviewPayload) => {
 
 const getReviews = () => {
   return getRequest({
-    url: "/review",
+    url: "/review"
   });
 };
 
-export {getReviews, addReview };
-
+export { getReviews, addReview };

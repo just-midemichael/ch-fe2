@@ -1,23 +1,21 @@
-import { getRequest } from "@/utils/api/calls";
+import { getRequest } from "../../utils/api/calls";
 
 const searchHotel = (data: any) => {
-  let args = Object.keys(data)
-  .map((item) => `${item}=${data[item]}`)
-  .join("&");
+  const args = Object.keys(data)
+    .map(
+      (item) => `${encodeURIComponent(item)}=${encodeURIComponent(data[item])}`
+    )
+    .join("&");
 
   return getRequest({
     url: `/hotel/search?${args}`
   });
 };
 
-const getHotel = (hotelId:string) => {
+const getHotel = (hotelId: string) => {
   return getRequest({
-    url: `/hotel/${hotelId}`,
+    url: `/hotel/${hotelId}`
   });
 };
 
-
-
-export { searchHotel,getHotel};
-
-
+export { searchHotel, getHotel };

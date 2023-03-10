@@ -13,7 +13,7 @@ export interface IBooking {
   Cost: number,
   HotelId: string,
   Details?: any,
-  Type: BookingTypes,
+  Type?: BookingTypes,
   HotelName: string,
   RoomName: string,
   CheckOutDate: string

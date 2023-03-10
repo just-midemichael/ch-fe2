@@ -1,19 +1,17 @@
-import { getRequest, postRequest } from "@/utils/api/calls";
-import { BookingPayload } from "./payload";
+import { getRequest, postRequest } from "../../utils/api/calls";
+import { IBooking } from "./payload";
 
 const getBookings = () => {
   return getRequest({
-    url: "/bookings",
+    url: "/bookings"
   });
 };
 
-const createBooking = (data: BookingPayload) => {
+const createBooking = (data: IBooking) => {
   return postRequest({
     url: "/bookings",
     data
   });
 };
 
-export { getBookings,createBooking};
-
-
+export { getBookings, createBooking };

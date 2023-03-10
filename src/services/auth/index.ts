@@ -1,5 +1,11 @@
-import { postRequest, putRequest } from "@/utils/api/calls";
-import type { ChangePasswordPayload, ForgotPasswordPayload, GoogleLoginPayload, LoginPayload, RegisterPayload } from "./payload";
+import { postRequest, putRequest } from "../../utils/api/calls";
+import type {
+  ChangePasswordPayload,
+  ForgotPasswordPayload,
+  GoogleLoginPayload,
+  LoginPayload,
+  RegisterPayload
+} from "./payload";
 
 const login = (data: LoginPayload) => {
   return postRequest({
@@ -50,6 +56,12 @@ const resetPassword = (data: any) => {
   });
 };
 
-
-export { login,googleLogin, changePassword,forgotPassword,validateResetOTP,registerCustomer,resetPassword };
-
+export {
+  login,
+  googleLogin,
+  changePassword,
+  forgotPassword,
+  validateResetOTP,
+  registerCustomer,
+  resetPassword
+};
