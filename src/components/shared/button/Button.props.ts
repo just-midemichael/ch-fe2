@@ -4,6 +4,6 @@ export default interface ButtonProps
   type?: "button" | "submit" | "reset";
   size?: "sm" | "md" | "lg" | "subscribe" | "media";
   children?: React.ReactNode;
-  color?: "primary" | "secondary" | "danger-outline" | "neutral" | "media";
+  color?: "primary" | "secondary" | "danger" | "neutral" | "media";
   outline?: Boolean;
 }

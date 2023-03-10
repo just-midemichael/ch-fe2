@@ -16,15 +16,15 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 w-max -translate-x-1/2 -translate-y-1/2">
           <Hero />
           <div className="my-4 flex gap-x-2.5">
-            <Button size="sm" color="primary">
+            <Button size="lg"  color="neutral">
+              Explore 
+            </Button>
+
+            <Button size="subscribe" color="primary">
               Explore
             </Button>
 
-            <Button size="md" color="primary">
-              Explore
-            </Button>
-
-            <Button size="lg" color="danger-outline">
+            <Button size="lg" color="danger">
               Explore
             </Button>
 
