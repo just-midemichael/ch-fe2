@@ -2,7 +2,7 @@ import { getProfile, updateProfile } from "./index";
 import { getRequest, postRequest } from "../../utils/api/calls";
 import type { UserPayload } from "./payload";
 
-jest.mock("../..//utils/api/calls", () => ({
+jest.mock("../../utils/api/calls", () => ({
   getRequest: jest.fn(),
   postRequest: jest.fn()
 }));
