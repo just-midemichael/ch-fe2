@@ -9,7 +9,6 @@ import {
   resetPassword
 } from "./index";
 
-
 jest.mock("../../utils/api/calls", () => ({
   postRequest: jest.fn(),
   putRequest: jest.fn()
