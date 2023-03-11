@@ -8,3 +8,43 @@
   background: #ccc;
   width: max-content;
 }
+
+.size {
+  &__small {
+    @apply min-w-[93px] rounded-lg py-[6px] px-[16px] leading-[20px];
+  }
+  &__md {
+    @apply min-w-[106px] rounded-lg py-[9.5px] px-[23px] leading-[21px]
+  }
+  &__lg {
+    @apply min-w-[136px] rounded-lg py-[12px] px-[26px] leading-[24px]
+  }
+  &__subscribe {
+    @apply  min-w-[136px] rounded-3xl py-[12px] px-[26px] leading-[25px]
+  }
+  &__media {
+    @apply min-w-[55px] hover:rounded-[100%] flex items-center justify-center
+  }
+}
+
+.variants {
+  &__primary {
+    @apply bg-[#FE8501] text-white
+  }
+
+  &__secondary {
+    @apply bg-[#0D1C39] text-white
+  }
+
+  &__neutral {
+    @apply border-2 border-[#212AEE] bg-[#FFF] text-[#212AEE] hover:bg-[#212AEE] hover:text-[#FFF] active:bg-[#212AEE]
+  }
+
+  &__danger {
+    @apply border-2 border-[#D93025] bg-[#FFF] text-[#D93025] hover:bg-[#D93025] hover:text-[#FFF] active:bg-[#D93025]
+  }
+
+  &__media {
+    @apply text-black hover:bg-[#FE8501] hover:text-white
+  }
+}
