@@ -1,10 +1,5 @@
-import styles from "./inputs.module.scss";
-
-interface InputProps extends React.HTMLProps<HTMLInputElement> {
-  label?: string;
-  name?: string;
-  placeholder?: string;
-}
+import styles from "./input.module.scss";
+import type InputProps from "./input.props";
 
 const InputText: React.FC<InputProps> = ({
   label,

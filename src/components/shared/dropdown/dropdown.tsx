@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import styles from "./inputs.module.scss";
-
-interface DropdownProps {
-  options: string[];
-  onSelect: (selectedOption: string) => void;
-}
+import styles from "./dropdown.module.scss";
+import type DropdownProps from "./dropdown.props";
 
 const Dropdown: React.FC<DropdownProps> = ({ options, onSelect }) => {
   const [selectedOption, setSelectedOption] = useState<string>("");
