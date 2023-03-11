@@ -1,14 +1,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
-import authReducer from "./slice/auth/auth.slice";
-import hotelReducer from "./slice/hotel/hotel.slice";
-import bookingReducer from "./slice/booking/booking.slice";
-import roomReducer from "./slice/room/room.slice";
-
 import {
   nextReduxCookieMiddleware,
   wrapMakeStore
 } from "next-redux-cookie-wrapper";
+import authReducer from "./slice/auth/auth.slice";
+import hotelReducer from "./slice/hotel/hotel.slice";
+import bookingReducer from "./slice/booking/booking.slice";
+import roomReducer from "./slice/room/room.slice";
 
 const combinedReducer = combineReducers({
   auth: authReducer,

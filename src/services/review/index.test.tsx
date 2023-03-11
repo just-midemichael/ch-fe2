@@ -1,6 +1,6 @@
 import { getRequest, postRequest } from "../../utils/api/calls";
 import { addReview, getReviews } from "./index";
-import { ReviewPayload } from "./payload";
+import type { ReviewPayload } from "./payload";
 
 jest.mock("../../utils/api/calls", () => ({
   getRequest: jest.fn(),

@@ -1,5 +1,5 @@
 import { getRequest, postRequest } from "../../utils/api/calls";
-import { UserPayload } from "./payload";
+import type { UserPayload } from "./payload";
 
 const getProfile = () => {
   return getRequest({

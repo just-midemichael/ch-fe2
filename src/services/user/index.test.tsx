@@ -1,6 +1,6 @@
 import { getProfile, updateProfile } from "./index";
 import { getRequest, postRequest } from "../../utils/api/calls";
-import { UserPayload } from "./payload";
+import type { UserPayload } from "./payload";
 
 jest.mock("../..//utils/api/calls", () => ({
   getRequest: jest.fn(),

@@ -1,5 +1,5 @@
 import { getRequest, postRequest } from "../../utils/api/calls";
-import { ReviewPayload } from "./payload";
+import type { ReviewPayload } from "./payload";
 
 const addReview = (data: ReviewPayload) => {
   return postRequest({

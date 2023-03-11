@@ -4,5 +4,4 @@ export interface ReviewPayload {
   HotelId: string;
   Rating: string;
   Message: string;
-  
 }

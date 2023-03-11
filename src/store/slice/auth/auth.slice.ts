@@ -1,7 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
-import { RootState } from "@/store/index";
-import { UserPayload } from "@/services/user/payload";
+import type { RootState } from "@/store/index";
+import type { UserPayload } from "@/services/user/payload";
 
 export type AuthState = {
   user: UserPayload | null;

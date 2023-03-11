@@ -1,5 +1,5 @@
 import { getRequest, postRequest } from "../../utils/api/calls";
-import { IBooking } from "./payload";
+import type { IBooking } from "./payload";
 
 const getBookings = () => {
   return getRequest({
