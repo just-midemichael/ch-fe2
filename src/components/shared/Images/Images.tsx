@@ -1,48 +1,51 @@
-export const CityImg: React.FC<JSX.IntrinsicElements['img']> = (props) => {
-    return (
-      <img 
+export const CityImg: React.FC<JSX.IntrinsicElements["img"]> = (props) => {
+  return (
+    <img
       {...props}
-      className ={`
-      object-contain rounded-lg h-40
+      className={`
+      h-40 rounded-lg object-contain
       ${props.className}`}
       src={`${props.src}`}
-      />
-    );
+      alt={`${props.alt}`}
+    />
+  );
 };
 
-
-export const HotelImg: React.FC<JSX.IntrinsicElements['img']> = (props) => {
-    return (
-      <img 
+export const HotelImg: React.FC<JSX.IntrinsicElements["img"]> = (props) => {
+  return (
+    <img
       {...props}
-      className ={`
-      object-contain rounded-lg h-48
+      className={`
+      h-48 rounded-lg object-contain
       ${props.className}`}
       src={`${props.src}`}
-      />
-    );
+      alt={`${props.alt}`}
+    />
+  );
 };
 
-export const FeaturedImg: React.FC<JSX.IntrinsicElements['img']> = (props) => {
-    return (
-      <img 
+export const FeaturedImg: React.FC<JSX.IntrinsicElements["img"]> = (props) => {
+  return (
+    <img
       {...props}
-      className ={`
-      object-contain rounded-t-lg h-40
+      className={`
+      h-40 rounded-t-lg object-contain
       ${props.className}`}
       src={`${props.src}`}
-      />
-    );
+      alt={`${props.alt}`}
+    />
+  );
 };
 
-export const LogoImg: React.FC<JSX.IntrinsicElements['img']> = (props) => {
-    return (
-      <img 
+export const LogoImg: React.FC<JSX.IntrinsicElements["img"]> = (props) => {
+  return (
+    <img
       {...props}
-      className ={`
+      className={`
       object-contain 
       ${props.className}`}
       src={`${props.src}`}
-      />
-    );
+      alt={`${props.alt}`}
+    />
+  );
 };

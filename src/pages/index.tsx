@@ -3,8 +3,6 @@ import Meta from "@/components/shared/meta/Meta";
 import Main from "@/layout/main/Main";
 import { LogoImg } from "@/components/shared/Images/Images";
 
-
-
 export default function Home() {
   return (
     <>
@@ -18,7 +16,7 @@ export default function Home() {
           <Hero />
           <div className="my-4 flex gap-x-2.5">
             <div className="object-contain">
-              <LogoImg src='./logo.png' />
+              <LogoImg src="./logo.png" />
             </div>
           </div>
         </div>
