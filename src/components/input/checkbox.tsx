@@ -1,33 +1,40 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./inputs.module.scss";
 
-type CheckboxProps = {
+interface CheckboxProps {
   label: string;
-  isChecked: boolean;
-  onChange: (isChecked: boolean) => void;
-};
+  value: string;
+  onChange: (value: string) => void;
+}
 
-const Checkbox = ({ label, isChecked, onChange }: CheckboxProps) => {
-  const [checked, setChecked] = useState<boolean>(isChecked);
+const Checkbox: React.FC<CheckboxProps> = ({ label, value, onChange }) => {
+  const [isChecked, setIsChecked] = useState(false);
 
-  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const isChecked = event.target.checked;
-    setChecked(isChecked);
-    onChange(isChecked);
+  const handleCheckboxChange = ({
+    target: { checked }
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(checked);
+
+    if (checked) {
+      console.log(`Selected item: ${value}`);
+      onChange(value);
+    } else {
+      console.log(`${value} is unchecked`);
+    }
   };
 
   return (
-    <label>
-      <div className={styles.check}>
+    <div className={styles.check}>
+      <label>
         <input
           className={styles.checkbox}
           type="checkbox"
-          checked={checked}
-          onChange={handleOnChange}
+          checked={isChecked}
+          onChange={handleCheckboxChange}
         />
         {label}
-      </div>
-    </label>
+      </label>
+    </div>
   );
 };
 

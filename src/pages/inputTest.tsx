@@ -7,13 +7,13 @@ import InputText from "@/components/input/inputText";
 import Main from "@/layout/main/Main";
 
 export default function InputTest() {
-  const handleCheckboxChange = (isChecked: boolean) => {
-    console.log(`Checkbox is checked: ${isChecked}`);
-  };
   const handleOptionSelect = (selectedOption: string) => {
     console.log(`Selected option: ${selectedOption}`);
   };
 
+  const handleCheckboxChange = (value: string) => {
+    console.log(`Checkbox value: ${value}`);
+  };
   return (
     <div>
       <Main>
@@ -24,8 +24,14 @@ export default function InputTest() {
         />
         <div className="py-5">
           <Checkbox
-            label="Checkbox"
-            isChecked={false}
+            label="Hotel"
+            value="Hotel"
+            onChange={handleCheckboxChange}
+          />
+          <Checkbox label="City" value="City" onChange={handleCheckboxChange} />
+          <Checkbox
+            label="Motel"
+            value="Motel"
             onChange={handleCheckboxChange}
           />
         </div>

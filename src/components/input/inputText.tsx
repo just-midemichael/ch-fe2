@@ -1,7 +1,6 @@
-import React, { InputHTMLAttributes } from "react";
 import styles from "./inputs.module.scss";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   name?: string;
   placeholder?: string;
@@ -19,7 +18,7 @@ const InputText: React.FC<InputProps> = ({
         <div className="py-4">{label}</div>
       </label>
       <input
-        className={styles.put}
+        className={styles.inputs}
         type="text"
         id={name}
         name={name}
