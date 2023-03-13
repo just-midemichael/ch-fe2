@@ -14,7 +14,7 @@ export default function Home() {
       <Main>
         <div className="absolute top-1/2 left-1/2 w-max -translate-x-1/2 -translate-y-1/2">
           <Hero />
-          <div className="h-[120px] w-full">
+          <div className="h-[200px] w-full">
             <Img
               path="/featured.png"
               name="featured"
