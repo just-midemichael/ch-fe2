@@ -1,4 +1,5 @@
 import Hero from "@/components/home/hero/Hero";
+import City from "@/components/shared/City Card/City";
 import Featured from "@/components/shared/Featured Card/Featured";
 import Hotel from "@/components/shared/Hotel Card/Hotel";
 import Meta from "@/components/shared/meta/Meta";
@@ -25,6 +26,7 @@ export default function Home() {
             />
             <Hotel className="" featured={false} info={true} favourite={true} />
             <Featured className="" featured={true} />
+            <City className="" />
           </div>
         </div>
       </Main>

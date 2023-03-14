@@ -3,14 +3,17 @@ import { GoLocation } from "react-icons/go";
 import type ImageProps from "./City.props";
 import Img from "../Images/Image";
 import { H5, H6 } from "../font headers/Fonts";
+import styles from "./City.module.scss";
 
 const City: FC<ImageProps> = ({ className }) => {
   return (
     <div className={`${className}`}>
       <div className="relative">
-        <figure className={`h-[230px] w-[230px] ${className}`}>
-          <Img path="/city.png" name="city" className="rounded-lg" />
-        </figure>
+        <Img
+          path="/city.png"
+          name="city"
+          className={`${styles.base} ${styles.skeleton}`}
+        />
 
         <div className="absolute top-[50%] left-[44%] rounded-full bg-[#FE8501] p-[5px]">
           <GoLocation className=" h-full w-[22px] cursor-pointer text-white" />
