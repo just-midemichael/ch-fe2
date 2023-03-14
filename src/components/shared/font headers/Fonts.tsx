@@ -46,7 +46,7 @@ export const H5: React.FC<JSX.IntrinsicElements["h5"]> = (props) => {
   return (
     <h5
       {...props}
-      className={`font-poppins text-[15px] font-semibold leading-[22px] text-black ${props.className}`}
+      className={`font-poppins text-[13px] font-semibold leading-[22px] text-black ${props.className}`}
     >
       {props.children}
     </h5>
@@ -57,7 +57,7 @@ export const H6: React.FC<JSX.IntrinsicElements["h6"]> = (props) => {
   return (
     <h6
       {...props}
-      className={`font-poppins text-[15px] font-normal leading-[22px] text-gray-400 ${props.className}`}
+      className={`font-poppins text-[12px] font-normal leading-[22px] text-gray-400 ${props.className}`}
     >
       {props.children}
     </h6>
@@ -68,7 +68,7 @@ export const P: React.FC<JSX.IntrinsicElements["p"]> = (props) => {
   return (
     <p
       {...props}
-      className={`font-poppins text-[14px] leading-[40px] ${props.className}`}
+      className={`font-poppins text-[14px] leading-[20px] ${props.className}`}
     >
       {props.children}
     </p>

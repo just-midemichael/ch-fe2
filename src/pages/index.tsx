@@ -1,7 +1,8 @@
 import Hero from "@/components/home/hero/Hero";
+import Featured from "@/components/shared/Featured Card/Featured";
+import Hotel from "@/components/shared/Hotel Card/Hotel";
 import Meta from "@/components/shared/meta/Meta";
 import Main from "@/layout/main/Main";
-import Img from "@/components/shared/Images/Image";
 
 export default function Home() {
   return (
@@ -12,14 +13,18 @@ export default function Home() {
       />
 
       <Main>
-        <div className="absolute top-1/2 left-1/2 w-max -translate-x-1/2 -translate-y-1/2">
+        <div className="">
           <Hero />
-          <div className="h-[200px] w-full">
-            <Img
-              path="/featured.png"
-              name="featured"
-              className="overflow-hidden object-contain"
+          <div className="flex items-center gap-6">
+            <Hotel className="" featured={true} info={true} favourite={false} />
+            <Hotel
+              className=""
+              featured={true}
+              info={false}
+              favourite={false}
             />
+            <Hotel className="" featured={false} info={true} favourite={true} />
+            <Featured className="" featured={true} />
           </div>
         </div>
       </Main>
