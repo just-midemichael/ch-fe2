@@ -1,8 +1,9 @@
 import Hero from "@/components/home/hero/Hero";
-import Button from "@/components/shared/button/Button";
+import City from "@/components/shared/City Card/City";
+import Featured from "@/components/shared/Featured Card/Featured";
+import Hotel from "@/components/shared/Hotel Card/Hotel";
 import Meta from "@/components/shared/meta/Meta";
 import Main from "@/layout/main/Main";
-import { FaFacebookF } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -13,24 +14,14 @@ export default function Home() {
       />
 
       <Main>
-        <div className="absolute top-1/2 left-1/2 w-max -translate-x-1/2 -translate-y-1/2">
+        <div>
           <Hero />
-          <div className="my-4 flex gap-x-2.5">
-            <Button size="lg" color="neutral">
-              Explore
-            </Button>
-
-            <Button size="subscribe" color="primary">
-              Explore
-            </Button>
-
-            <Button size="lg" color="danger">
-              Explore
-            </Button>
-
-            <Button size="media" color="media">
-              <FaFacebookF />
-            </Button>
+          <div className="flex items-center gap-6">
+            <Hotel featured={true} info={true} favourite={false} />
+            <Hotel featured={true} info={false} favourite={true} />
+            <Hotel featured={false} info={true} favourite={true} />
+            <Featured featured={true} />
+            <City />
           </div>
         </div>
       </Main>
