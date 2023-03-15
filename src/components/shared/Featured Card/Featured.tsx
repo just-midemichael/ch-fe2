@@ -17,14 +17,13 @@ const Featured: FC<FeaturedProps> = ({ className, featured }) => {
           className={`${styles.base} ${styles.skeleton}`}
         />
 
-        {featured ? (
+        {featured && (
           <div className="border-md absolute top-5 left-2 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
             <AiOutlineThunderbolt />
             <H6 className="text-[10px] text-white">FEATURED</H6>
           </div>
-        ) : (
-          <div></div>
-        )}
+        ) 
+        }
 
         <div className="border-md absolute bottom-5 left-2 flex rounded bg-white px-3 py-1">
           <H5>&#8358; 14,000</H5> <H6 className="text-gray-500">/ night</H6>
