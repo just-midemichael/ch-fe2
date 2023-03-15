@@ -1,33 +1,47 @@
-import Hero from "@/components/home/hero/Hero";
-import Button from "@/components/shared/button/Button";
-import CheckboxList from "@/components/shared/checkbox/CheckboxList";
-import Dropdown from "@/components/shared/dropdown/dropdown";
-import InputText from "@/components/shared/input/inputText";
-import Meta from "@/components/shared/meta/Meta";
-import Main from "@/layout/main/Main";
 import { useState } from "react";
+import type { ChangeEvent } from "react";
+import Hero from "@/components/home/hero/Hero";
+import AmountInput from "@/components/shared/amountInput/amountInput";
+import Button from "@/components/shared/button/Button";
+import Checkbox from "@/components/shared/checkbox/Checkbox";
+import Dropdown from "@/components/shared/dropdown/Dropdowns";
+import Meta from "@/components/shared/meta/Meta";
+import SearchInput from "@/components/shared/searchInput/searchInput";
+import InputText from "@/components/shared/textInput/inputText";
+import Main from "@/layout/main/Main";
 
 export default function Home() {
-  const handleDropdownSelect = () => {};
+  const options = [
+    {
+      label: "Motel",
+      value: ""
+    },
+    {
+      label: "Boy",
+      value: "boy"
+    },
+    {
+      label: "Girl",
+      value: "girl"
+    }
+  ];
 
-  const [checkboxSelectedOptions, setCheckboxSelectedOptions] = useState<{
-    [key: string]: boolean;
-  }>({
-    Hotel: false,
-    City: false,
-    Motel: false
-  });
-  const handleCheckboxListChange = (selectedOptions: {
-    [key: string]: boolean;
-  }) => {
-    setCheckboxSelectedOptions(selectedOptions);
+  const [dropdownValue, setDropdownValue] = useState("");
+  const handleDropdownChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    setDropdownValue(e.target.value);
   };
 
-  const options = [
-    { label: "Hotel", value: "Hotel" },
-    { label: "City", value: "City" },
-    { label: "Motel", value: "Motel" }
-  ];
+  const [checkboxes, setCheckboxes] = useState({
+    Hotel: false,
+    City: false
+  });
+
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setCheckboxes((prevState) => {
+      return { ...prevState, [e.target.name]: e.target.checked };
+    });
+  };
+
   return (
     <>
       <Meta
@@ -43,23 +57,38 @@ export default function Home() {
               Explore
             </Button>
           </div>
-          <InputText
-            label="Username"
-            name="username"
-            placeholder="Enter Your Username"
-          />
           <div className="py-5">
-            <CheckboxList
-              options={options}
-              selectedOptions={checkboxSelectedOptions}
-              onChange={handleCheckboxListChange}
+            <SearchInput placeholder="Search" />
+          </div>
+          <div className="py-5">
+            <InputText
+              label="Username"
+              name="username"
+              placeholder="Enter Your Username"
             />
+            <InputText type="password" label="Password" name="username" />
+          </div>
+          <div className="py-5">
+            <Checkbox
+              label="Hotel"
+              value={checkboxes.Hotel}
+              onChange={handleCheckboxChange}
+            />
+            <Checkbox
+              label="City"
+              value={checkboxes.City}
+              onChange={handleCheckboxChange}
+            />
+            <AmountInput placeholder="$ min" />
           </div>
           <div className="py-4">
-            <Dropdown
-              options={["Option 1", "Option 2", "Option 3"]}
-              onSelect={handleDropdownSelect}
-            />
+            <div>
+              <Dropdown
+                options={options}
+                onChange={handleDropdownChange}
+                dropdownValue={dropdownValue}
+              />
+            </div>
           </div>
         </div>
       </Main>
