@@ -45,7 +45,7 @@ const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
         <H6 className={`text-white`}> Hotel Name </H6>
         <H6 className="text-white"> Hotel Location </H6>
 
-        {info ? (
+        {info && (
           <div className="flex gap-2">
             <div className="flex items-center gap-1 text-white">
               <BiBed className="text-[10px] font-thin" />{" "}
@@ -62,8 +62,6 @@ const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
               <H6 className="text-[10px] font-thin text-white">1200 sqft</H6>
             </div>
           </div>
-        ) : (
-          <></>
         )}
       </div>
     </div>
