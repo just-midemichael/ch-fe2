@@ -5,7 +5,7 @@ import styles from "./Image.module.scss";
 
 const Img: FC<ImageProps> = ({ className, path, name }) => {
   return (
-    <figure className={`relative h-full w-full overflow-hidden ${className}`}>
+    <figure className={`relative overflow-hidden ${className}`}>
       <Image src={path} className={styles.base} fill={true} alt={name} />
     </figure>
   );

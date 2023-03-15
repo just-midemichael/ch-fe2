@@ -14,19 +14,14 @@ export default function Home() {
       />
 
       <Main>
-        <div className="">
+        <div>
           <Hero />
           <div className="flex items-center gap-6">
-            <Hotel className="" featured={true} info={true} favourite={false} />
-            <Hotel
-              className=""
-              featured={true}
-              info={false}
-              favourite={false}
-            />
-            <Hotel className="" featured={false} info={true} favourite={true} />
-            <Featured className="" featured={true} />
-            <City className="" />
+            <Hotel featured={true} info={true} favourite={false} />
+            <Hotel featured={true} info={false} favourite={true} />
+            <Hotel featured={false} info={true} favourite={true} />
+            <Featured featured={true} />
+            <City />
           </div>
         </div>
       </Main>

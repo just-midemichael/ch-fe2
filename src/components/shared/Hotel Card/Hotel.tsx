@@ -18,16 +18,14 @@ const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
         className={`${styles.base} ${styles.skeleton}`}
       />
 
-      {featured ? (
+      {featured && (
         <div className="border-md absolute top-3 left-3 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
           <AiOutlineThunderbolt className="" />
           <H6 className="text-[9px] text-white">FEATURED</H6>
         </div>
-      ) : (
-        <div></div>
       )}
 
-      {favourite ? (
+      {favourite && (
         <div className="absolute top-5 right-5 flex flex-col gap-1 text-white">
           <div className=" rounded-md bg-[#181A20] p-1 opacity-90">
             <AiOutlineHeart className="cursor-pointer text-[15px] hover:text-[#FE8501]" />
@@ -41,8 +39,6 @@ const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
             <BsBoxArrowUpRight className="cursor-pointer text-[15px] hover:text-[#FE8501]" />
           </div>
         </div>
-      ) : (
-        <></>
       )}
 
       <div className="absolute bottom-6 left-3">
