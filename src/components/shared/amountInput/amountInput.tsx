@@ -1,5 +1,5 @@
 import { Label } from "../headings/Headings";
-import styles from "./amountInput.module.scss";
+import styles from "./AmountInput.module.scss";
 import type AmountInputProps from "./AmountInput.props";
 
 const AmountInput: React.FC<AmountInputProps> = ({

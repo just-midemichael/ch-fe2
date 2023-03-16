@@ -1,6 +1,6 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import { Label } from "../headings/Headings";
-import styles from "./searchInput.module.scss";
+import styles from "./SearchInput.module.scss";
 import type searchInputProps from "./SearchInput.props";
 
 const SearchInput: React.FC<searchInputProps> = ({
