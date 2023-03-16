@@ -1,8 +1,8 @@
-import { Label } from "../font headers/Fonts";
+import { Label } from "../headings/Headings";
 import styles from "./amountInput.module.scss";
-import type InputProps from "./amountInput.props";
+import type AmountInputProps from "./AmountInput.props";
 
-const AmountInput: React.FC<InputProps> = ({
+const AmountInput: React.FC<AmountInputProps> = ({
   label,
   name,
   placeholder,

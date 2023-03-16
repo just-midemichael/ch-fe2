@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import { GoLocation } from "react-icons/go";
 import type ImageProps from "./City.props";
-import Img from "../Images/Image";
-import { H5, H6 } from "../font headers/Fonts";
+import Img from "../images/Image";
+import { H5, H6 } from "../headings/Headings";
 import styles from "./City.module.scss";
 
 const City: FC<ImageProps> = ({ className }) => {

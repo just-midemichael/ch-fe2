@@ -6,7 +6,9 @@ Important rules
 
 ```bash
     - Never use NPM, PNPM etc. Only YARN.
-    - Pull request should be scoped to one feature or fix, except in complex features and flows
+    - Pull request should be scoped to one feature or fix, except in complex features and flows.
+    - All files created under the component folder should start with a capital letter.
+    - All folders should follow the camelCase, no white space is permitted in their naming.
     - Commit messages should carry their appropiate flag e.g feat, fix, chore etc /* [git commit -m "feat: added input components"] */
 ```
 

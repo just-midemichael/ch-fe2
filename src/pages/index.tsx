@@ -1,16 +1,16 @@
 import { useState } from "react";
 import type { ChangeEvent } from "react";
 import Hero from "@/components/home/hero/Hero";
-import City from "@/components/shared/City Card/City";
-import Featured from "@/components/shared/Featured Card/Featured";
-import Hotel from "@/components/shared/Hotel Card/Hotel";
-import AmountInput from "@/components/shared/amountInput/amountInput";
+import City from "@/components/shared/cityCard/City";
+import Featured from "@/components/shared/featuredCard/Featured";
+import Hotel from "@/components/shared/hotelCard/Hotel";
+import AmountInput from "@/components/shared/amountInput/AmountInput";
 import Checkbox from "@/components/shared/checkbox/Checkbox";
-import Dropdown from "@/components/shared/dropdown/Dropdowns";
+import Dropdown from "@/components/shared/dropdown/Dropdown";
 import Meta from "@/components/shared/meta/Meta";
-import SearchInput from "@/components/shared/searchInput/searchInput";
-import InputText from "@/components/shared/textInput/inputText";
+import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
+import Input from "@/components/shared/input/Input";
 
 export default function Home() {
   const options = [
@@ -65,12 +65,12 @@ export default function Home() {
             <SearchInput placeholder="Search" />
           </div>
           <div className="py-5">
-            <InputText
+            <Input
               label="Username"
               name="username"
               placeholder="Enter Your Username"
             />
-            <InputText type="password" label="Password" name="username" />
+            <Input type="password" label="Password" name="username" />
           </div>
           <div className="py-5">
             <Checkbox
