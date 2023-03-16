@@ -1,0 +1,18 @@
+.inputs {
+  width: 100%;
+  @apply border px-5 py-4 my-3 border-grey30 h-[54px] rounded-lg focus:outline-0 focus:border-primary400;
+}
+
+.inputs_no_border {
+  width: 100%;
+  @apply px-2 border-y border-grey30  h-[54px] rounded-l focus:outline-0;
+}
+
+.input_wrapper {
+  width: 100%;
+  @apply border flex items-center px-3 py-4 my-3  border-grey30 h-[54px] rounded-lg focus:outline-0 focus:border-primary400;
+}
+
+.input_prepend {
+  @apply border-0 w-[15px] items-center justify-center rounded-l-none rounded-r-lg;
+}
