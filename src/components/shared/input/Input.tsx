@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import styles from "./Input.module.scss";
-import type InputProps from "./Input.props";
-import x from "./x";
+import type InputProps from "./input.props";
+import x from "./X";
 
 const Input: React.FC<InputProps> = ({
   label,
