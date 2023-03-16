@@ -74,3 +74,14 @@ export const P: React.FC<JSX.IntrinsicElements["p"]> = (props) => {
     </p>
   );
 };
+
+export const Label: React.FC<JSX.IntrinsicElements["label"]> = (props) => {
+  return (
+    <label
+      {...props}
+      className={`font-poppins text-[15px] leading-[18px] ${props.className}`}
+    >
+      {props.children}
+    </label>
+  );
+};

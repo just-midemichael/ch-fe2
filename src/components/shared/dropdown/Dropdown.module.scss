@@ -1,0 +1,11 @@
+.select__wrapper {
+  @apply relative flex items-center  h-[54px] w-full focus:border  border-grey30;
+}
+
+.select {
+  @apply w-full z-10 bg-transparent border px-5 py-0 my-3 h-full cursor-pointer rounded-lg focus:outline-0 focus:border-primary400 border-grey30 appearance-none;
+}
+
+.select__caret {
+  @apply absolute z-0 right-0 flex h-[54px] w-[54px] mx-0 border-l border-grey30 items-center justify-center rounded-l-none rounded-r-lg;
+}

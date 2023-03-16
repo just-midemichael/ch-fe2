@@ -5,8 +5,8 @@ import { BsBoxArrowUpRight, BsHouse } from "react-icons/bs";
 import { IoCopyOutline } from "react-icons/io5";
 import type HotelProps from "./Hotel.props";
 import styles from "./Hotel.module.scss";
-import Img from "../Images/Image";
-import { H6 } from "../font headers/Fonts";
+import Img from "../images/Image";
+import { H6 } from "../headings/Headings";
 
 const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
   return (

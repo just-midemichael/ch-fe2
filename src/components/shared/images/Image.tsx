@@ -1,7 +1,8 @@
 import type { FC } from "react";
 import Image from "next/image";
-import type ImageProps from "./Image.props";
+
 import styles from "./Image.module.scss";
+import type ImageProps from "./Image.props";
 
 const Img: FC<ImageProps> = ({ className, path, name }) => {
   return (

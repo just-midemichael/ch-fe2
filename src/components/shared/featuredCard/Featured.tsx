@@ -2,10 +2,10 @@ import type { FC } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { IoCopyOutline } from "react-icons/io5";
 import { AiOutlineHeart, AiOutlineThunderbolt } from "react-icons/ai";
-import Img from "../Images/Image";
+import Img from "../images/Image";
 import type FeaturedProps from "./Featured.props";
 import styles from "./Featured.module.scss";
-import { H5, H6 } from "../font headers/Fonts";
+import { H5, H6 } from "../headings/Headings";
 
 const Featured: FC<FeaturedProps> = ({ className, featured }) => {
   return (
