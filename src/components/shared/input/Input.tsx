@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import styles from "./Input.module.scss";
-import type InputProps from "./input.props";
-import x from "./X";
+import type InputProps from "./Injput.props";
 
 const Input: React.FC<InputProps> = ({
   label,
@@ -12,7 +11,7 @@ const Input: React.FC<InputProps> = ({
   ...rest
 }) => {
   const [mode, setMode] = useState("password");
-  console.log(x);
+
   return (
     <div className="relative">
       <label htmlFor={name}>

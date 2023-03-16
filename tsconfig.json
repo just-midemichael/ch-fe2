@@ -36,5 +36,6 @@
     },
     "module": "esnext"
   },
-  "exclude": ["./out/**/*", "./node_modules/**/*"]
+  "exclude": ["./out/**/*", "./node_modules/**/*"],
+  "include": ["next-env.d.ts", "./src/**/*"]
 }
