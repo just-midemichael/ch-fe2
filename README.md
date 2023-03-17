@@ -4,14 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Important rules
 
-```bash
-    - Never use `npm`, `pnpm` etc. Only `yarn`.
-    - Pull requests should be scoped to one feature or fix, except for complex features and flows.
-    - All files created under the `component` folder should start with a capital letter.
-    - All folders should follow the camel casing, no white space is permitted in their naming.
-    - Functions should follow camel casing e.g `addFiles`
-    - Commit messages should carry their appropiate flag e.g feat, fix, chore etc. Here is a sample commit command `git commit -m "feat: added input components"`
-```
+
+- `yarn` is the package manager on this project, not `npm`, `pnpm` etc
+- Pull requests should be scoped to one feature or fix, except for complex features and flows.
+- All files created under the `component` folder should start with a capital letter.
+- All folders should follow camel casing, no white space is permitted in its naming.
+- Functions should follow camel casing e.g `addFiles`, class names should follow pascal casing e.g `AddFiles`
+- Commit messages should carry their appropiate flag e.g feat, fix, chore etc. Here is a sample commit command `git commit -m "feat: added input components"`
+
 
 To install project dependencies
 
