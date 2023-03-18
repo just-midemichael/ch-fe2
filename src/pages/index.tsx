@@ -11,6 +11,7 @@ import Meta from "@/components/shared/meta/Meta";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
 import Input from "@/components/shared/input/Input";
+import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
 
 export default function Home() {
   const options = [
@@ -95,6 +96,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <RegisterHotelComponent />
       </Main>
     </>
   );

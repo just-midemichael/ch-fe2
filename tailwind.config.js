@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary50: "#e8f0fe",
-        primary100: "#b6cffc",
+        primary50: "#FFF9F6",
+        primary100: "#FFF3EA",
         primary200: "#93b8fa",
         primary300: "#6297f8",
         primary400: "#FE8501",
@@ -23,7 +23,8 @@ module.exports = {
 
         grey20: "#F0F5F7",
         grey30: "#DDDDDD",
-        grey40: "#717171"
+        grey40: "#717171",
+        black: "#2A2A2B"
       },
       fontFamily: {
         playfair: ['"Playfair Display"', "system-ui"],
