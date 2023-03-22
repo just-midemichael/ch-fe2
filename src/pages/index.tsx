@@ -53,47 +53,51 @@ export default function Home() {
       />
 
       <Main>
-        <div>
-          <Hero />
-          <div className="flex items-center gap-6">
-            <Hotel featured={true} info={true} favourite={false} />
-            <Hotel featured={true} info={false} favourite={true} />
-            <Hotel featured={false} info={true} favourite={true} />
-            <Featured featured={true} />
-            <City />
-          </div>
-          <div className="py-5">
-            <SearchInput placeholder="Search" />
-          </div>
-          <div className="py-5">
-            <Input
-              label="Username"
-              name="username"
-              placeholder="Enter Your Username"
+        <Hero />
+        <div className="flex items-center gap-6 overflow-x-auto">
+          <Hotel featured={true} info={true} favourite={false} />
+          <Hotel featured={true} info={false} favourite={true} />
+          <Hotel featured={false} info={true} favourite={true} />
+          <Featured featured={true} />
+          <City />
+        </div>
+        <div className="py-5">
+          <SearchInput placeholder="Search" />
+        </div>
+        <div className="py-5">
+          <Input
+            label="Username"
+            name="username"
+            placeholder="Enter Your Username"
+            className="rounded-lg"
+          />
+          <Input
+            type="password"
+            label="Password"
+            name="username"
+            className="rounded-lg"
+          />
+        </div>
+        <div className="py-5">
+          <Checkbox
+            label="Hotel"
+            value={checkboxes.Hotel}
+            onChange={handleCheckboxChange}
+          />
+          <Checkbox
+            label="City"
+            value={checkboxes.City}
+            onChange={handleCheckboxChange}
+          />
+          <AmountInput placeholder="$ min" />
+        </div>
+        <div className="py-4">
+          <div>
+            <Dropdown
+              options={options}
+              onChange={handleDropdownChange}
+              dropdownValue={dropdownValue}
             />
-            <Input type="password" label="Password" name="username" />
-          </div>
-          <div className="py-5">
-            <Checkbox
-              label="Hotel"
-              value={checkboxes.Hotel}
-              onChange={handleCheckboxChange}
-            />
-            <Checkbox
-              label="City"
-              value={checkboxes.City}
-              onChange={handleCheckboxChange}
-            />
-            <AmountInput placeholder="$ min" />
-          </div>
-          <div className="py-4">
-            <div>
-              <Dropdown
-                options={options}
-                onChange={handleDropdownChange}
-                dropdownValue={dropdownValue}
-              />
-            </div>
           </div>
         </div>
         <RegisterHotelComponent />

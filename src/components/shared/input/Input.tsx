@@ -8,19 +8,24 @@ const Input: React.FC<InputProps> = ({
   name,
   placeholder,
   type,
+  className,
+  rightComponent,
   ...rest
 }) => {
   const [mode, setMode] = useState("password");
 
   return (
     <div className="relative">
-      <label htmlFor={name}>
-        <div className="py-4">{label}</div>
-      </label>
+      {label && (
+        <label htmlFor={name}>
+          <div className="py-4">{label}</div>
+        </label>
+      )}
+
       {type === "password" ? (
-        <div className="relative">
+        <div className={`relative ${styles.input_container} ${className}`}>
           <input
-            className={`${styles.inputs}`}
+            className={`${styles.input}`}
             type={mode}
             id={name}
             name={name}
@@ -36,14 +41,17 @@ const Input: React.FC<InputProps> = ({
           </div>
         </div>
       ) : (
-        <input
-          className={`${styles.inputs}`}
-          type={type}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          {...rest}
-        />
+        <div className={`${styles.input_container} ${className}`}>
+          <input
+            className={`${styles.input}`}
+            type={type}
+            id={name}
+            name={name}
+            placeholder={placeholder}
+            {...rest}
+          />
+          {rightComponent && rightComponent}
+        </div>
       )}
     </div>
   );

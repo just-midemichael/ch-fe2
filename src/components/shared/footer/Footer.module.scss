@@ -1,0 +1,7 @@
+.social_icons_container {
+  @apply p-2 rounded-full text-grey80 hover:bg-primary400 hover:text-white;
+}
+
+.social_icons {
+  @apply bg-inherit text-inherit cursor-pointer;
+}
