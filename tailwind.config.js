@@ -23,11 +23,19 @@ module.exports = {
 
         grey20: "#F0F5F7",
         grey30: "#DDDDDD",
-        grey40: "#717171"
+        grey40: "#717171",
+        grey50: "#252525",
+        grey60: "#696969",
+        grey70: "#424242",
+        grey80: "#B3B3B3",
+        grey90: "#545454",
+
+        black20: "#070707"
       },
       fontFamily: {
         playfair: ['"Playfair Display"', "system-ui"],
-        poppins: ['"Poppins"', "system-ui"]
+        poppins: ['"Poppins"', "system-ui"],
+        barlow: ['"Barlow"', "sans-serif"]
       }
     }
   },

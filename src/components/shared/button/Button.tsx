@@ -5,7 +5,7 @@ import match from "../../../utils/match";
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
   size = "",
-  color = "",
+  color = "primary",
   children,
   className,
   ...rest
