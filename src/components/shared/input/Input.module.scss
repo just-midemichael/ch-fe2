@@ -1,6 +1,10 @@
-.inputs {
-  width: 100%;
-  @apply border px-5 py-4 my-3 border-grey30 h-[54px] rounded-lg focus:outline-0 focus:border-primary400;
+.input_container {
+  @apply flex border h-[48px] border-grey30  focus-within:border-primary400;
+}
+
+.input {
+  @apply w-full px-5 py-2 focus:outline-0 bg-inherit text-inherit border-none;
+  border-radius: inherit;
 }
 
 .icon-container {

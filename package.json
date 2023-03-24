@@ -24,6 +24,7 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "eslint-plugin-prettier": "^4.2.1",
+    "formik": "^2.2.9",
     "husky": "^8.0.3",
     "next": "13.1.6",
     "next-redux-cookie-wrapper": "^2.2.1",
@@ -33,9 +34,11 @@
     "react-datepicker": "^4.10.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-otp-input": "^2.4.0",
     "react-redux": "^8.0.5",
     "react-select": "^5.7.1",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
