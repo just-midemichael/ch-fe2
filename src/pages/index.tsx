@@ -11,6 +11,7 @@ import Meta from "@/components/shared/meta/Meta";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
 import Input from "@/components/shared/input/Input";
+import HorizontalScroll from "@/components/shared/horizontalScroll";
 
 export default function Home() {
   const options = [
@@ -98,6 +99,97 @@ export default function Home() {
               dropdownValue={dropdownValue}
             />
           </div>
+        </div>
+        <div>
+          <HorizontalScroll
+            title="Explore Our Featured Hotels"
+            subTitle="Aliquam lacinia diam quis lacus euismod"
+          >
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+          </HorizontalScroll>
         </div>
       </Main>
     </>
