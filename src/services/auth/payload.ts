@@ -22,6 +22,7 @@ export interface RegisterPayload {
   Email: string;
   Telephone: string;
   Password: string;
+  Password_Confirmation?: string;
 }
 
 export interface ResetPasswordPayload {
