@@ -42,7 +42,7 @@ const Banner: React.FC<BannerProps> = () => {
           </H4>
         </div>
 
-        <div className="my-10 mx-[12%] flex w-[75%] justify-center gap-5 py-4 align-middle backdrop-blur-sm">
+        <div className="my-10 mx-[12%] flex justify-center gap-5 p-4 align-middle backdrop-blur-sm">
           <div className="border-r-solid border-r-2 border-[#828282] px-4">
             <div className="mb-1 flex gap-3 align-middle">
               <MdRoom className="text-white" />
@@ -51,7 +51,7 @@ const Banner: React.FC<BannerProps> = () => {
             <Select
               classNamePrefix="select"
               className="h-[29px] w-[220px] bg-transparent focus:outline-none"
-              placeholder={"Where are you going?"}
+              placeholder={"Where are you going ?"}
               name="city"
               options={options}
             />

@@ -6,20 +6,21 @@ body {
   font-family: 'Poppins',  'Playfair Display', serif;
 }
 
-.ant-picker .ant-picker-input >input::placeholder, 
-.ant-space-item {
+input::placeholder {
   color: white;
 }
- 
+
+.react-datepicker {
+  border: none !important;
+}
+
 .select__input {
   color: white !important;
   padding: 0;
 }
 
 .select__indicator {
-  padding: 0px !important;
-  color: white !important; 
-  cursor: pointer !important;
+  display: none !important;
 }
 
 .select__control {
@@ -37,7 +38,8 @@ body {
 }
 
 .select__single-value,
-.select_input-container {
+.select_input-container,
+.select__placeholder {
   font-size: 16px !important;
   color: white !important;
   padding: 0  !important;
