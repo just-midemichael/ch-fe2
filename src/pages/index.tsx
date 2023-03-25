@@ -19,6 +19,12 @@ import ToastWrapper from "@/components/shared/toast/Toast";
 export default function Home() {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const _preventDoubleUseEffect = useRef(true);
+
+  // Unlike in production, useEffect calls twice in development.
+  // If the conditional statement is removed, you will get 6 toasts.
+  // This conditional statement isn't need in production, and will be removed later.
+  // The three different toasts are used here for reference purpose
+
   useEffect(() => {
     if (_preventDoubleUseEffect.current) {
       toast.success(
