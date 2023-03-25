@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import type { ChangeEvent } from "react";
 import Hero from "@/components/home/hero/Hero";
 import City from "@/components/shared/cityCard/City";
@@ -12,8 +12,39 @@ import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
 import Input from "@/components/shared/input/Input";
 import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
+import { toast } from "react-hot-toast";
+import { toastIcons } from "@/utils/constants";
+import ToastWrapper from "@/components/shared/toast/Toast";
 
 export default function Home() {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const _preventDoubleUseEffect = useRef(true);
+  useEffect(() => {
+    if (_preventDoubleUseEffect.current) {
+      toast.success(
+        (t) => <ToastWrapper message="Welcome to City Hotels" t={t} />,
+        {
+          icon: toastIcons.success
+        }
+      );
+
+      toast.error(
+        (t) => <ToastWrapper message="Something went wrong" t={t} />,
+        {
+          icon: toastIcons.error
+        }
+      );
+
+      toast((t) => <ToastWrapper message="Please provide a PIN" t={t} />, {
+        icon: toastIcons.warning
+      });
+    }
+
+    return () => {
+      _preventDoubleUseEffect.current = false;
+    };
+  }, []);
+
   const options = [
     {
       label: "Motel",
