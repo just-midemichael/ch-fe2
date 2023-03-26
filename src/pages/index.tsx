@@ -12,6 +12,7 @@ import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
 import Input from "@/components/shared/input/Input";
 import HorizontalScroll from "@/components/shared/horizontalScroll";
+import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
 
 export default function Home() {
   const options = [
@@ -189,8 +190,21 @@ export default function Home() {
               info={true}
               favourite={true}
             />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
           </HorizontalScroll>
         </div>
+        <RegisterHotelComponent />
       </Main>
     </>
   );

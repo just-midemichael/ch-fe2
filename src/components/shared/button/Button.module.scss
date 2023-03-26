@@ -11,10 +11,10 @@
 
 .size {
   &__small {
-    @apply min-w-[93px] rounded-lg py-[6px] px-[16px] leading-[20px];
+    @apply min-w-[93px] rounded-sm py-[6px] px-[16px] leading-[20px];
   }
   &__md {
-    @apply min-w-[106px] rounded-lg py-[9.5px] px-[23px] leading-[21px]
+    @apply min-w-[106px] rounded-md py-[9.5px] px-[23px] leading-[21px]
   }
   &__lg {
     @apply min-w-[136px] rounded-lg py-[12px] px-[26px] leading-[24px]
