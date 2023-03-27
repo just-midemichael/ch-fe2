@@ -1,12 +1,22 @@
 .base {
     height: 170px;
     width: 260px;
+    border-radius: 0px;
 }
 
 .skeleton {
     animation: skeleton-loading 1s linear infinite alternate;
-    border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.h4 {
+  color: black;
+  font-weight: 700;
+}
+
+.h6 {
+  color: black;
 }
 
 @keyframes skeleton-loading {
