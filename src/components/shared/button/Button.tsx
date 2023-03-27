@@ -5,7 +5,7 @@ import match from "../../../utils/match";
 
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
   size = "",
-  color = "",
+  color = "primary",
   children,
   className,
   ...rest
@@ -31,9 +31,9 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   return (
     <button
       aria-label={rest.title}
-      className={`${className} 
+      className={`
       ${buttonSize}
-      ${variant}
+      ${variant} ${className} 
     
     `}
       {...rest}
