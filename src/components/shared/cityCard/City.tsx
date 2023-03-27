@@ -5,12 +5,12 @@ import Img from "../images/Image";
 import { H5, H6 } from "../headings/Headings";
 import styles from "./City.module.scss";
 
-const City: FC<ImageProps> = ({ className }) => {
+const City: FC<ImageProps> = ({ className, path }) => {
   return (
     <div className={`${className}`}>
       <div className="relative">
         <Img
-          path="/city.png"
+          path={`${path}`}
           name="city"
           className={`${styles.base} ${styles.skeleton}`}
         />

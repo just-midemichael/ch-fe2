@@ -7,12 +7,12 @@ import type FeaturedProps from "./Featured.props";
 import styles from "./Featured.module.scss";
 import { H5, H6 } from "../headings/Headings";
 
-const Featured: FC<FeaturedProps> = ({ className, featured }) => {
+const Featured: FC<FeaturedProps> = ({ className, featured, path }) => {
   return (
     <div className={`${className}`}>
       <div className=" relative">
         <Img
-          path="/featured.png"
+          path={`${path}`}
           name="featured"
           className={`${styles.base} ${styles.skeleton}`}
         />

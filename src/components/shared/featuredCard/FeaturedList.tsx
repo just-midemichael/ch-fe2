@@ -15,7 +15,7 @@ const FeaturedList: FC<FeaturedProps> = ({ className, featured, path }) => {
         <Img
           path={`${path}`}
           name="featured"
-          className={`h-[250px] w-[290px] rounded-none ${styles.skeleton}`}
+          className={`h-[250px] w-[290px] rounded-none ${styles.skeletonList}`}
         />
 
         {featured && (
