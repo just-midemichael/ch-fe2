@@ -11,8 +11,8 @@ import Button from "../button/Button";
 import Img from "../images/Image";
 
 const Banner: React.FC<BannerProps> = () => {
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+  const [startDate, setStartDate] = useState<Date | null>();
+  const [endDate, setEndDate] = useState<Date | null>();
 
   const persons = [
     { value: "3 persons", label: "3 persons" },
