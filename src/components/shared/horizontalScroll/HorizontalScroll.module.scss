@@ -1,0 +1,7 @@
+.indicator{
+  @apply  block rounded-full h-[6px] w-[6px] bg-black10
+}
+
+.active{
+  @apply h-[8px] w-[8px] bg-black
+}

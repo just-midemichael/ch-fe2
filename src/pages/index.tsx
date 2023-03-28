@@ -11,7 +11,7 @@ import Meta from "@/components/shared/meta/Meta";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
 import Input from "@/components/shared/input/Input";
-import HorizontalScroll from "@/components/shared/horizontalScroll";
+import HorizontalScroll from "@/components/shared/horizontalScroll/HorizontalScroll";
 import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
 
 export default function Home() {
@@ -105,7 +105,32 @@ export default function Home() {
           <HorizontalScroll
             title="Explore Our Featured Hotels"
             subTitle="Aliquam lacinia diam quis lacus euismod"
+            showPagination
           >
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
+            <Hotel
+              className="mx-3"
+              featured={false}
+              info={true}
+              favourite={true}
+            />
             <Hotel
               className="mx-3"
               featured={false}
