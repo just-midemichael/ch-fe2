@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary50: "#e8f0fe",
-        primary100: "#b6cffc",
+        primary50: "#FFF9F6",
+        primary100: "#FFF3EA",
         primary200: "#93b8fa",
         primary300: "#6297f8",
         primary400: "#FE8501",
@@ -30,12 +30,12 @@ module.exports = {
         grey80: "#B3B3B3",
         grey90: "#545454",
 
-        black20: "#070707"
+        black20: "#070707",
+        black: "#2A2A2B"
       },
       fontFamily: {
         playfair: ['"Playfair Display"', "system-ui"],
-        poppins: ['"Poppins"', "system-ui"],
-        barlow: ['"Barlow"', "sans-serif"]
+        poppins: ['"Poppins"', "system-ui"]
       }
     }
   },

@@ -4,4 +4,5 @@ export default interface HotelProps
   featured?: boolean;
   info?: boolean;
   favourite?: boolean;
+  path: string;
 }

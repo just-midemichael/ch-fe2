@@ -5,3 +5,54 @@
 body {
   font-family: 'Poppins',  'Playfair Display', serif;
 }
+
+input::placeholder {
+  color: white;
+}
+
+.react-datepicker {
+  border: none !important;
+}
+
+.select__input {
+  color: white !important;
+  padding: 0;
+}
+
+.select__indicator {
+  display: none !important;
+}
+
+.select__control {
+  background: transparent !important;
+  border: none !important;
+  margin-top: -4px !important;
+  padding: 0  !important;
+}
+
+.select__control--is-focused{
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.select__single-value,
+.select_input-container,
+.select__placeholder {
+  font-size: 16px !important;
+  color: white !important;
+  padding: 0  !important;
+}
+
+.select__value-container{
+  padding: 0  !important;
+}
+
+.select__indicator-separator {
+  display: none !important;
+}
+
+.select__menu {
+  width: 200px !important;
+}
