@@ -4,11 +4,13 @@ import type { Toast } from "react-hot-toast";
 
 const ToastWrapper = ({ message, t }: { message: string; t: Toast }) => {
   return (
-    <div className="flex items-center gap-16">
+    <div className="flex items-center text-[12px]">
       <span
-        className={`pl-1 font-[500] ${t.type === "success" && "text-green10"} ${
-          t.type === "error" && "text-red10"
-        } ${t.type === "blank" && "text-yellow10"}`}
+        className={`min-w-[200px] pr-16 font-[500] ${
+          t.type === "success" && "text-green10"
+        } ${t.type === "error" && "text-red10"} ${
+          t.type === "blank" && "text-yellow10"
+        }`}
       >
         {message}
       </span>

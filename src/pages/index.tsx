@@ -27,12 +27,9 @@ export default function Home() {
 
   useEffect(() => {
     if (_preventDoubleUseEffect.current) {
-      toast.success(
-        (t) => <ToastWrapper message="Welcome to City Hotels" t={t} />,
-        {
-          icon: toastIcons.success
-        }
-      );
+      toast.success((t) => <ToastWrapper message="Welcome" t={t} />, {
+        icon: toastIcons.success
+      });
 
       toast.error(
         (t) => <ToastWrapper message="Something went wrong" t={t} />,
