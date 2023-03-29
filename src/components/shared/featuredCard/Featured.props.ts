@@ -3,4 +3,10 @@ export default interface FeaturedProps
   className?: string;
   featured?: boolean;
   path: string;
+  featuredPrice?: string;
+  featuredPlace?: string;
+  featuredLocation?: string;
+  featuredBed?: string;
+  featuredBath?: string;
+  featuredSize?: string;
 }

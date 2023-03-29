@@ -8,7 +8,17 @@ import type FeaturedProps from "./Featured.props";
 import styles from "./Featured.module.scss";
 import { H4, H5, H6, P } from "../headings/Headings";
 
-const FeaturedList: FC<FeaturedProps> = ({ className, featured, path }) => {
+const FeaturedList: FC<FeaturedProps> = ({
+  className,
+  featured,
+  path,
+  featuredPrice,
+  featuredBed,
+  featuredBath,
+  featuredSize,
+  featuredPlace,
+  featuredLocation
+}) => {
   return (
     <div className={`${className} flex`}>
       <div className=" relative">
@@ -26,30 +36,30 @@ const FeaturedList: FC<FeaturedProps> = ({ className, featured, path }) => {
         )}
 
         <div className="border-md absolute bottom-5 left-5 flex rounded bg-white px-3 py-1">
-          <H5>&#8358; 14,000</H5> <P>/ mo</P>
+          <H5>&#8358; {`${featuredPrice}`}</H5> <P>/ mo</P>
         </div>
       </div>
 
       <div className="`border-solid  border- w-[40vw] rounded-r-lg border border-[#C2C2C2] px-3 pl-5 pr-7">
         <div className="py-5">
-          <H4 className={`${styles.h4}`}>Luxury Villa in Rego Park</H4>
-          <H6 className={styles.h6}>California City, CA USA</H6>
+          <H4 className={`${styles.h4}`}>{`${featuredPlace}`}</H4>
+          <H6 className={styles.h6}>{`${featuredLocation}`}</H6>
         </div>
 
         <div className="flex gap-7">
           <div className="flex items-center gap-1 align-middle text-black">
             <BiBed />
-            <H6 className={`${styles.h6} text-[14px]`}> 3 Bed</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredBed}`}</H6>
           </div>
 
           <div className="flex items-center gap-1 text-black">
             <BiShower className="" />
-            <H6 className={`${styles.h6} text-[14px]`}>4 bath</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredBath}`}</H6>
           </div>
 
           <div className="flex items-center gap-1 text-black">
             <BsHouse className="" />
-            <H6 className={`${styles.h6} text-[14px]`}>1200 sqft</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredSize}`}</H6>
           </div>
         </div>
 
@@ -62,7 +72,8 @@ const FeaturedList: FC<FeaturedProps> = ({ className, featured, path }) => {
 
         <div className="flex items-center justify-between  py-5">
           <div className="flex">
-            <H5>&#8358; 14,000</H5> <P className="text-black">/ night</P>
+            <H5>&#8358; {`${featuredPrice}`}</H5>{" "}
+            <P className="text-black">/ night</P>
           </div>
 
           <div className="flex items-center gap-3">

@@ -7,7 +7,14 @@ import type FeaturedProps from "./Featured.props";
 import styles from "./Featured.module.scss";
 import { H5, H6 } from "../headings/Headings";
 
-const Featured: FC<FeaturedProps> = ({ className, featured, path }) => {
+const Featured: FC<FeaturedProps> = ({
+  className,
+  featured,
+  path,
+  featuredPrice,
+  featuredLocation,
+  featuredPlace
+}) => {
   return (
     <div className={`${className}`}>
       <div className=" relative">
@@ -25,16 +32,15 @@ const Featured: FC<FeaturedProps> = ({ className, featured, path }) => {
         )}
 
         <div className="border-md absolute bottom-5 left-2 flex rounded bg-white px-3 py-1">
-          <H5>&#8358; 14,000</H5> <H6 className="text-gray-500">/ night</H6>
+          <H5>&#8358; {`${featuredPrice}`}</H5>{" "}
+          <H6 className="text-gray-500">/ night</H6>
         </div>
       </div>
 
       <div className="`border-solid rounded-b-lg border border-t-0  border-[#C2C2C2] px-3">
         <div className="py-5">
-          <H5 className="underline underline-offset-1">
-            Luxury Villa in Rego Park
-          </H5>
-          <H6>California City, CA USA</H6>
+          <H5 className="underline underline-offset-1">{`${featuredPlace}`}</H5>
+          <H6>{`${featuredLocation}`}</H6>
         </div>
 
         <hr />
