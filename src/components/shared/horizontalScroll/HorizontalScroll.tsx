@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import ArrowLeftIcon from "@/assets/icons/arrow-left.svg";
 import ArrowRightIcon from "@/assets/icons/arrow-right.svg";
 import { H3, P } from "../headings/Headings";
@@ -18,14 +18,15 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
   const [currentPosition, setCurrentPosition] = useState(1);
   const [clientWidth, setClientWidth] = useState(0);
 
-  const scrollWidth = useMemo(() => ref.current?.scrollWidth || 0, [
-    ref.current?.scrollWidth
-  ]);
+  const scrollWidth = useMemo(
+    () => ref.current?.scrollWidth || 0,
+    [ref.current?.scrollWidth]
+  );
 
-  const maxScroll = useMemo(() => scrollWidth - clientWidth, [
-    clientWidth,
-    scrollWidth
-  ]);
+  const maxScroll = useMemo(
+    () => scrollWidth - clientWidth,
+    [clientWidth, scrollWidth]
+  );
 
   const indicators = useMemo(() => {
     const b = [];
@@ -64,7 +65,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
     setCurrentPosition(position);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setClientWidth(ref.current?.clientWidth || 0);
     return () => {};
   }, [ref.current?.clientWidth]);

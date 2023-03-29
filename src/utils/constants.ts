@@ -48,5 +48,53 @@ export const hotelData = [
     featured: true,
     info: false,
     favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
   }
 ];
