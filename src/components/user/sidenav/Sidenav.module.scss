@@ -1,0 +1,19 @@
+.base {
+  @apply rounded-lg border border-gray-100;
+}
+
+
+.menuItem{
+  @apply  flex gap-[14px] p-4 border-l-4 border-l-transparent;
+  path{
+    fill: #ccc;
+  }
+
+}
+.active{
+  @apply border-l-4 border-l-primary400 bg-[#F2EFED] text-black;
+
+  path{
+    fill: black;
+  }
+}
