@@ -31,6 +31,7 @@ module.exports = {
         grey90: "#545454",
         grey100: "#DFDFE6",
 
+        black10: "#D7D7D7",
         black20: "#070707",
         black: "#2A2A2B",
 
