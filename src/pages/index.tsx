@@ -1,5 +1,6 @@
 import FeaturedList from "@/components/shared/featuredCard/FeaturedList";
 import Meta from "@/components/shared/meta/Meta";
+import React from "react";
 
 export default function Home() {
   return (
