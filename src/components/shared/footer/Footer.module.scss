@@ -5,3 +5,11 @@
 .social_icons {
   @apply bg-inherit text-inherit cursor-pointer;
 }
+
+.socials {
+  @apply flex items-center justify-between bg-grey50 p-4 lg:px-[8rem] lg:py-12;
+}
+
+.terms {
+  @apply bg-black20 p-4 lg:pb-10 lg:pt-6 lg:px-[8rem];
+}
