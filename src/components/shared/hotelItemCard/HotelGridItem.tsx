@@ -3,18 +3,18 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import { IoCopyOutline } from "react-icons/io5";
 import { AiOutlineHeart, AiOutlineThunderbolt } from "react-icons/ai";
 import Img from "../images/Image";
-import type FeaturedProps from "./Featured.props";
-import styles from "./Featured.module.scss";
+import type HotelItem from "./HotelItem.props";
+import styles from "./HotelItem.module.scss";
 import { H5, H6 } from "../headings/Headings";
 
-const Featured: FC<FeaturedProps> = ({ className, featured }) => {
+const HotelGridItem: FC<HotelItem> = ({ className, featured }) => {
   return (
-    <div className={`${className}`}>
-      <div className=" relative">
+    <div className={`${className} max-w-[360px]  rounded-t-lg`}>
+      <div className="relative h-[235px]">
         <Img
           path="/featured.png"
           name="featured"
-          className={`${styles.base} ${styles.skeleton}`}
+          className={`${styles.gridBase}  ${styles.skeleton}`}
         />
 
         {featured && (
@@ -53,4 +53,4 @@ const Featured: FC<FeaturedProps> = ({ className, featured }) => {
   );
 };
 
-export default Featured;
+export default HotelGridItem;
