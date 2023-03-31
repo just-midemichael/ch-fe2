@@ -9,12 +9,12 @@ import { H5, H6 } from "../headings/Headings";
 
 const HotelGridItem: FC<HotelItem> = ({ className, featured }) => {
   return (
-    <div className={`${className} max-w-[360px]`}>
-      <div className=" relative">
+    <div className={`${className} max-w-[360px]  rounded-t-lg`}>
+      <div className="relative h-[235px]">
         <Img
           path="/featured.png"
           name="featured"
-          className={`${styles.base} ${styles.skeleton} w-full`}
+          className={`${styles.gridBase}  ${styles.skeleton}`}
         />
 
         {featured && (

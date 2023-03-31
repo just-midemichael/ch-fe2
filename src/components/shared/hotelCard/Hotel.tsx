@@ -16,7 +16,7 @@ const Hotel: FC<HotelProps> = ({
   path
 }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${styles.base}  ${className}`}>
       <Img
         id="pic"
         path={`${path}`}

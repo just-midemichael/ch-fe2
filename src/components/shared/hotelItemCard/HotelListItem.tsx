@@ -11,11 +11,11 @@ import { H4, H5, H6, P } from "../headings/Headings";
 const HotelListItem: FC<HotelItem> = ({ className, featured, path }) => {
   return (
     <div className={`${className} flex`}>
-      <div className=" relative">
+      <div className="relative h-[250px] w-[290px]">
         <Img
           path={`${path}`}
           name="featured"
-          className={`h-[250px] w-[290px] rounded-none ${styles.skeleton}`}
+          className={` ${styles.listBase} ${styles.skeleton}`}
         />
 
         {featured && (
