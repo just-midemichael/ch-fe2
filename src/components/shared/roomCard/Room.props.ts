@@ -1,6 +1,8 @@
+import type { IRoom } from "@/services/room/payload";
+
 export default interface RoomProps
   extends React.HtmlHTMLAttributes<HTMLElement> {
   className?: string;
-  path: string;
+  room: IRoom;
   inverted?: boolean;
 }

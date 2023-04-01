@@ -1,6 +1,8 @@
+import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
+import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import Meta from "@/components/shared/meta/Meta";
-import RoomCard from "@/components/shared/roomCard/Room";
-import { roomObject } from "@/utils/constants";
+import React from "react";
+import { hotel } from "@/utils/constants";
 
 export default function Home() {
   return (
@@ -9,15 +11,10 @@ export default function Home() {
         title="Welcome to City Hotels"
         description="Home page of City Hotels, Nigeria"
       />
-
-      <div className="mx-7 mt-7 flex flex-col gap-4">
-        {roomObject.map((room) => (
-          <RoomCard
-            path="/available.png"
-            inverted={room.inverted}
-            key={room.id}
-          />
-        ))}
+      <div className=" ml-10 mt-4 flex flex-col gap-7">
+        <HotelListItem hotel={hotel} featured={true} />
+        <HotelListItem hotel={hotel} />
+        <HotelGridItem hotel={hotel} />
       </div>
     </>
   );

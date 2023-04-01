@@ -1,13 +1,19 @@
-.base {
-    height: 170px;
-    width: 260px;
-    border-radius: 0px;
+.gridBase {
+  @apply w-full h-full rounded-t-lg
 }
 
+.listBase{
+  @apply w-full h-full rounded-l-lg
+}
+
+
+
 .skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeletonList {
     animation: skeleton-loading 1s linear infinite alternate;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
 }
 
 .h4 {

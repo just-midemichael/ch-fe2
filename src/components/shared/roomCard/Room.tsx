@@ -10,7 +10,7 @@ import Img from "../images/Image";
 import type RoomProps from "./Room.props";
 import Button from "../button/Button";
 
-const RoomCard: FC<RoomProps> = ({ className, path, inverted }) => {
+const RoomCard: FC<RoomProps> = ({ className, room, inverted }) => {
   return (
     <div className={`${className}`}>
       <div
@@ -27,8 +27,8 @@ const RoomCard: FC<RoomProps> = ({ className, path, inverted }) => {
                 ? `h-[207.63px] w-[355px]  md:h-[400.4px] md:w-[600.28px]  lg:h-[384.4px] lg:w-[661.28px]`
                 : `h-[207.63px] w-[355px]  md:mr-[-100px] md:h-[400.4px]  md:w-[600.28px] lg:mr-[0px] lg:h-[384.4px] lg:w-[661.28px]`
             }
-            path={`${path}`}
-            name="hotel room card"
+            path={`${room.Medias.find((item) => item.Type === 2)?.Path}`}
+            name={room.Name}
           />
           <div
             className={
@@ -53,8 +53,8 @@ const RoomCard: FC<RoomProps> = ({ className, path, inverted }) => {
           <div
             className={
               inverted
-                ? `w-[355px] border  border-[#F0F0F0]  bg-white p-4 md:absolute md:top-[69px] md:right-[-80px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] lg:right-[140px]`
-                : `left-[140px]  w-[355px] border border-[#F0F0F0] bg-white p-4 md:absolute md:top-[500px] md:left-[20px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] lg:left-[140px]`
+                ? `w-[355px] border  border-[#F0F0F0]  bg-white p-4 md:absolute md:top-[69px] md:right-[-80px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] lg:right-[140px] xl:right-[220px]`
+                : `left-[140px]  w-[355px] border border-[#F0F0F0] bg-white p-4 md:absolute md:top-[500px] md:left-[20px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] xl:left-[220px]`
             }
           >
             <div className="max-w-lg">
@@ -63,16 +63,12 @@ const RoomCard: FC<RoomProps> = ({ className, path, inverted }) => {
                 From{" "}
                 <span className="text-[20px] text-[#FE8501] ">
                   {" "}
-                  &#36; 100
+                  &#36; {room.Price}
                 </span>{" "}
                 /Night
               </P>
               <H3 className="pb-3 font-light">Standard Room</H3>
-              <P2>
-                {" "}
-                All our Deluxe rooms have big windows to help you take a broad
-                view of the cityscape and nature.
-              </P2>
+              <P2> {room.Description}</P2>
 
               <div className="mt-7 mb-3 grid grid-cols-3 gap-3">
                 <div className="flex items-center gap-2">
