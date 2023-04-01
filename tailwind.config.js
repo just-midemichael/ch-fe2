@@ -30,6 +30,7 @@ module.exports = {
         grey80: "#B3B3B3",
         grey90: "#545454",
 
+        black10: "#D7D7D7",
         black20: "#070707",
         black: "#2A2A2B"
       },

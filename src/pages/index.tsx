@@ -1,6 +1,6 @@
-import FeaturedList from "@/components/shared/featuredCard/FeaturedList";
+// import FeaturedList from "@/components/shared/featuredCard/FeaturedList";
 import Meta from "@/components/shared/meta/Meta";
-import { featuredObject } from "@/utils/constants";
+// import { featuredObject } from "@/utils/constants";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         description="Home page of City Hotels, Nigeria"
       />
       <div className="flex gap-4">
-        {featuredObject.map((featured) => (
+        {/* {featuredObject.map((featured) => (
           <FeaturedList
             key={featured.id}
             path={featured.path}
@@ -22,7 +22,7 @@ export default function Home() {
             featuredBed={featured.featuredBed}
             featuredSize={featured.featuredSize}
           />
-        ))}
+        ))} */}
       </div>
     </>
   );
