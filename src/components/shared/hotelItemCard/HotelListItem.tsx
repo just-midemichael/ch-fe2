@@ -19,7 +19,7 @@ const HotelListItem: FC<HotelItem> = ({ className, featured, path }) => {
         />
 
         {featured && (
-          <div className="border-md absolute top-5 left-5 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
+          <div className="border-md absolute left-5 top-5 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
             <AiOutlineThunderbolt />
             <H6 className="text-[10px] text-white">FEATURED</H6>
           </div>

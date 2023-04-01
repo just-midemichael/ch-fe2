@@ -15,7 +15,7 @@ const City: FC<ImageProps> = ({ className }) => {
           className={`${styles.base} ${styles.skeleton}`}
         />
 
-        <div className="absolute top-[50%] left-[44%] rounded-full bg-[#FE8501] p-[5px]">
+        <div className="absolute left-[44%] top-[50%] rounded-full bg-[#FE8501] p-[5px]">
           <GoLocation className=" h-full w-[22px] cursor-pointer text-white" />
         </div>
       </div>

@@ -12,7 +12,7 @@ const RegisterHotelComponent = () => {
   return (
     <div className="flex items-center justify-center gap-20 bg-primary50 lg:h-[880px]">
       <div className="relative">
-        <div className="absolute top-[30px] left-[-50px] z-10 flex items-center gap-3 rounded-lg bg-white p-[19px]">
+        <div className="absolute left-[-50px] top-[30px] z-10 flex items-center gap-3 rounded-lg bg-white p-[19px]">
           <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-black">
             <HomeIcon />
           </div>

@@ -62,7 +62,7 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
         </div>
       )}
 
-      <div className="bg-black20 p-4 lg:px-12 lg:pt-6 lg:pb-10">
+      <div className="bg-black20 p-4 lg:px-12 lg:pb-10 lg:pt-6">
         <div className="mx-auto w-max">
           <Img
             path="/logo.png"
