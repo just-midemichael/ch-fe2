@@ -4,28 +4,22 @@ import { IoCopyOutline } from "react-icons/io5";
 import { AiOutlineHeart, AiOutlineThunderbolt } from "react-icons/ai";
 import { BiBed, BiShower } from "react-icons/bi";
 import Img from "../images/Image";
-import type FeaturedProps from "./Featured.props";
-import styles from "./Featured.module.scss";
+import type HotelItem from "./HotelItem.props";
+import styles from "./HotelItem.module.scss";
 import { H4, H5, H6, P } from "../headings/Headings";
 
-const FeaturedList: FC<FeaturedProps> = ({
+const HotelListItem: FC<HotelItem> = ({
   className,
   featured,
-  path,
-  featuredPrice,
-  featuredBed,
-  featuredBath,
-  featuredSize,
-  featuredPlace,
-  featuredLocation
+  hotel: { Name, Address, Medias, AveragePrice }
 }) => {
   return (
     <div className={`${className} flex`}>
-      <div className=" relative">
+      <div className="relative h-[250px] w-[290px]">
         <Img
-          path={`${path}`}
+          path={`${Medias.find((item) => item.Type === 2)?.Path}`}
           name="featured"
-          className={`h-[250px] w-[290px] rounded-none ${styles.skeletonList}`}
+          className={` ${styles.listBase} ${styles.skeleton}`}
         />
 
         {featured && (
@@ -36,30 +30,30 @@ const FeaturedList: FC<FeaturedProps> = ({
         )}
 
         <div className="border-md absolute bottom-5 left-5 flex rounded bg-white px-3 py-1">
-          <H5>&#8358; {`${featuredPrice}`}</H5> <P>/ mo</P>
+          <H5>&#8358; {`${AveragePrice}`}</H5> <P>/ mo</P>
         </div>
       </div>
 
       <div className="`border-solid  border- w-[40vw] rounded-r-lg border border-[#C2C2C2] px-3 pl-5 pr-7">
         <div className="py-5">
-          <H4 className={`${styles.h4}`}>{`${featuredPlace}`}</H4>
-          <H6 className={styles.h6}>{`${featuredLocation}`}</H6>
+          <H4 className={`${styles.h4}`}>{`${Name}`}</H4>
+          <H6 className={styles.h6}>{`${Address.City}, ${Address.Country}`}</H6>
         </div>
 
         <div className="flex gap-7">
           <div className="flex items-center gap-1 align-middle text-black">
             <BiBed />
-            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredBed}`}</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${0}`}</H6>
           </div>
 
           <div className="flex items-center gap-1 text-black">
             <BiShower className="" />
-            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredBath}`}</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${0}`}</H6>
           </div>
 
           <div className="flex items-center gap-1 text-black">
             <BsHouse className="" />
-            <H6 className={`${styles.h6} text-[14px]`}>{`${featuredSize}`}</H6>
+            <H6 className={`${styles.h6} text-[14px]`}>{`${0}`}</H6>
           </div>
         </div>
 
@@ -72,7 +66,7 @@ const FeaturedList: FC<FeaturedProps> = ({
 
         <div className="flex items-center justify-between  py-5">
           <div className="flex">
-            <H5>&#8358; {`${featuredPrice}`}</H5>{" "}
+            <H5>&#8358; {`${AveragePrice}`}</H5>{" "}
             <P className="text-black">/ night</P>
           </div>
 
@@ -87,4 +81,4 @@ const FeaturedList: FC<FeaturedProps> = ({
   );
 };
 
-export default FeaturedList;
+export default HotelListItem;

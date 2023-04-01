@@ -2,16 +2,16 @@
 export type HotelPayoad = {
   name: string;
 };
-export type Address = {
+export type IAddress = {
   City: string;
   Country: string;
   PostalCode: string;
   State: string;
   Street: string;
 };
-export type Media = {
+export type IMedia = {
   Path: string;
-  Type: string;
+  Type?: 0 | 1 | 2;
   Status: boolean;
 };
 export type IHotel = {
@@ -22,12 +22,13 @@ export type IHotel = {
   Slogan: string;
   Slug: string;
   Telephone: string;
-  Address: Address;
+  Address: IAddress;
   Email: string;
-  Banner: Media;
+  Banner: IMedia;
   Facilities: string[];
-  Logo: Media;
-  Media: Media[];
+  Logo: IMedia;
+  Medias: IMedia[];
+  AveragePrice: number;
   Created_at: string;
   Last_updated: string;
 };

@@ -1,6 +1,8 @@
-// import FeaturedList from "@/components/shared/featuredCard/FeaturedList";
+import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
+import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import Meta from "@/components/shared/meta/Meta";
-// import { featuredObject } from "@/utils/constants";
+import React from "react";
+import { hotel } from "@/utils/constants";
 
 export default function Home() {
   return (
@@ -9,20 +11,10 @@ export default function Home() {
         title="Welcome to City Hotels"
         description="Home page of City Hotels, Nigeria"
       />
-      <div className="flex gap-4">
-        {/* {featuredObject.map((featured) => (
-          <FeaturedList
-            key={featured.id}
-            path={featured.path}
-            featured={featured.feature}
-            featuredPrice={featured.featuredPrice}
-            featuredLocation={featured.featuredLocation}
-            featuredPlace={featured.featuredPlace}
-            featuredBath={featured.featuredBath}
-            featuredBed={featured.featuredBed}
-            featuredSize={featured.featuredSize}
-          />
-        ))} */}
+      <div className=" ml-10 mt-4 flex flex-col gap-7">
+        <HotelListItem hotel={hotel} featured={true} />
+        <HotelListItem hotel={hotel} />
+        <HotelGridItem hotel={hotel} />
       </div>
     </>
   );
