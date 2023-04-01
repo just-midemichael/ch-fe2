@@ -1,10 +1,7 @@
+import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
+import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import Meta from "@/components/shared/meta/Meta";
-import Main from "@/layout/main/Main";
-import HorizontalScroll from "@/components/shared/horizontalScroll/HorizontalScroll";
-import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
-import Hotel from "@/components/shared/hotelCard/Hotel";
 import React from "react";
-import { hotelData } from "@/utils/constants";
 
 export default function Home() {
   return (
@@ -13,29 +10,11 @@ export default function Home() {
         title="Welcome to City Hotels"
         description="Home page of City Hotels, Nigeria"
       />
-
-      <Main>
-        <div className="my-12">
-          <HorizontalScroll
-            title="Explore Our Featured Hotels"
-            subTitle="Aliquam lacinia diam quis lacus euismod"
-            showPagination
-          >
-            {hotelData.map((hotel, index) => (
-              <React.Fragment key={index}>
-                <Hotel
-                  className="mx-3"
-                  featured={hotel.featured}
-                  info={hotel.info}
-                  favourite={hotel.favourite}
-                  path={hotel.path}
-                />
-              </React.Fragment>
-            ))}
-          </HorizontalScroll>
-        </div>
-        <RegisterHotelComponent />
-      </Main>
+      <div className=" ml-10 mt-4 flex flex-col gap-7">
+        <HotelListItem path="/hotellist.png" featured={true} />
+        <HotelListItem path="/hotellist.png" />
+        <HotelGridItem path="/hotellist.png" />
+      </div>
     </>
   );
 }
