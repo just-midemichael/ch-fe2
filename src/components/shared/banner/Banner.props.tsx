@@ -1,5 +1,4 @@
-export default interface CityProps
+export default interface BannerProps
   extends React.HtmlHTMLAttributes<HTMLElement> {
-  className?: string;
   path: string;
 }

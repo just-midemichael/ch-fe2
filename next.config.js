@@ -27,6 +27,9 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
 
     return config;
+  },
+  images: {
+    domains: ["cityhotels.s3.amazonaws.com"]
   }
 };
 

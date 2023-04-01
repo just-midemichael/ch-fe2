@@ -8,12 +8,18 @@ import styles from "./Hotel.module.scss";
 import Img from "../images/Image";
 import { H6 } from "../headings/Headings";
 
-const Hotel: FC<HotelProps> = ({ className, featured, info, favourite }) => {
+const Hotel: FC<HotelProps> = ({
+  className,
+  featured,
+  info,
+  favourite,
+  path
+}) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${styles.base}  ${className}`}>
       <Img
         id="pic"
-        path="/hotel.png"
+        path={`${path}`}
         name="hotel"
         className={`${styles.base} ${styles.skeleton}`}
       />
