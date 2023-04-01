@@ -10,7 +10,7 @@ import { H1, H4, P } from "../headings/Headings";
 import Button from "../button/Button";
 import Img from "../images/Image";
 
-const Banner: React.FC<BannerProps> = () => {
+const Banner: React.FC<BannerProps> = ({ path }) => {
   const [startDate, setStartDate] = useState<Date | null>();
   const [endDate, setEndDate] = useState<Date | null>();
 
@@ -30,7 +30,7 @@ const Banner: React.FC<BannerProps> = () => {
 
   return (
     <div className="relative h-[669px] w-full max-w-[100vw]">
-      <Img path="/banner.png" name="banner" className="h-full w-full" />
+      <Img path={`${path}`} name="banner" className="h-full w-full" />
       <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center">
         <div className="flex w-[942px] flex-col text-center align-middle">
           <H1 className="mb-4">Explore! Discover! Live!</H1>
