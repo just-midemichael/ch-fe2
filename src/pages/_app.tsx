@@ -7,7 +7,7 @@ import { Toaster } from "react-hot-toast";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Toaster position="bottom-left" toastOptions={toastOptions} />
+      <Toaster position="bottom-left" toastOptions={toastOptions} gutter={16} />
       <Component {...pageProps} />
     </>
   );

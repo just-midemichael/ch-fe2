@@ -1,8 +1,14 @@
 export const Error = (
-  <span className="rounded-full bg-red20 p-2">
+  <span className="w-34 h-34 rounded-full bg-red20">
     <svg
       width="22"
       height="22"
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)"
+      }}
       viewBox="0 0 22 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
