@@ -67,7 +67,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
               monthsShown={2}
               selected={startDate}
               placeholderText="Click to select"
-              onChange={(val) => {
+              onChange={(val: any) => {
                 setStartDate(val[0]);
                 setEndDate(val[1]);
               }}
