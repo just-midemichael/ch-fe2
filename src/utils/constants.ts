@@ -1,6 +1,15 @@
 import type { IHotel } from "@/services/hotel/payload";
+import { Success } from "../assets/icons/success";
+import { Error } from "../assets/icons/error";
+import { Warning } from "../assets/icons/warning";
 
 export const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
+export const toastIcons = {
+  success: Success,
+  error: Error,
+  warning: Warning
+};
 
 export const hotel: IHotel = {
   Id: "63a0308f2f40d02bb5e2d445",
@@ -39,3 +48,101 @@ export const hotel: IHotel = {
   Created_at: "",
   Last_updated: ""
 };
+export const hotelData = [
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  },
+  {
+    path: "/hotel.png",
+    featured: true,
+    info: false,
+    favourite: false
+  }
+];
