@@ -1,14 +1,18 @@
 import type { IHotel } from "@/services/hotel/payload";
 import type { IRoom } from "@/services/room/payload";
 
+import { Success } from "../assets/icons/success";
+import { Error } from "../assets/icons/error";
+import { Warning } from "../assets/icons/warning";
+
 export const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
-export const roomObject = [
-  { inverted: true, id: 1 },
-  { inverted: false, id: 2 },
-  { inverted: true, id: 3 },
-  { inverted: false, id: 4 }
-];
+export const toastIcons = {
+  success: Success,
+  error: Error,
+  warning: Warning
+};
+
 export const hotel: IHotel = {
   Id: "63a0308f2f40d02bb5e2d445",
   Name: "De' Lovers Hotel",

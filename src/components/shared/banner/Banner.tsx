@@ -42,7 +42,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
           </H4>
         </div>
 
-        <div className="my-10 mx-[12%] flex justify-center gap-5 p-4 align-middle backdrop-blur-sm">
+        <div className="mx-[12%] my-10 flex justify-center gap-5 p-4 align-middle backdrop-blur-sm">
           <div className="border-r-solid border-r-2 border-[#828282] px-4">
             <div className="mb-1 flex gap-3 align-middle">
               <MdRoom className="text-white" />
@@ -67,7 +67,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
               monthsShown={2}
               selected={startDate}
               placeholderText="Click to select"
-              onChange={(val) => {
+              onChange={(val: any) => {
                 setStartDate(val[0]);
                 setEndDate(val[1]);
               }}
