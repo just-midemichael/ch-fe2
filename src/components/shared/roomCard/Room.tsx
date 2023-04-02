@@ -9,34 +9,19 @@ import { H3, H6, P, P2 } from "../headings/Headings";
 import Img from "../images/Image";
 import type RoomProps from "./Room.props";
 import Button from "../button/Button";
+import style from "./Room.module.scss";
 
 const RoomCard: FC<RoomProps> = ({ className, room, inverted }) => {
   return (
-    <div className={`${className}`}>
-      <div
-        className={
-          inverted
-            ? `md:flex  lg:relative lg:items-center`
-            : `md:flex md:flex-row-reverse md:items-center lg:relative`
-        }
-      >
-        <div className="md:relative">
+    <div className={`${inverted ? style.inverted : ""} ${className}`}>
+      <div className={style.base}>
+        <div className={`md:relative ${style.imgCard}`}>
           <Img
-            className={
-              inverted
-                ? `h-[207.63px] w-[355px]  md:h-[400.4px] md:w-[600.28px]  lg:h-[384.4px] lg:w-[661.28px]`
-                : `h-[207.63px] w-[355px]  md:mr-[-100px] md:h-[400.4px]  md:w-[600.28px] lg:mr-[0px] lg:h-[384.4px] lg:w-[661.28px]`
-            }
+            className={`${style.skeleton} ${style.img}`}
             path={`${room.Medias.find((item) => item.Type === 2)?.Path}`}
             name={room.Name}
           />
-          <div
-            className={
-              inverted
-                ? `absolute bottom-[10px] left-7 flex items-center gap-2 md:bottom-[65px] md:left-10 lg:bottom-4 lg:left-12`
-                : `absolute bottom-[10px] left-9  flex items-center gap-2 md:left-[250px] md:bottom-[70px] lg:left-[400px] lg:bottom-4`
-            }
-          >
+          <div className={style.imgInfo}>
             <div className="flex cursor-pointer items-center gap-1 bg-white p-1">
               <AiOutlinePlayCircle className="text-gray-500" />
               <H6 className="text-gray-500">Watch Video</H6>
@@ -48,15 +33,8 @@ const RoomCard: FC<RoomProps> = ({ className, room, inverted }) => {
             </div>
           </div>
         </div>
-
-        <div>
-          <div
-            className={
-              inverted
-                ? `w-[355px] border  border-[#F0F0F0]  bg-white p-4 md:absolute md:top-[69px] md:right-[-80px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] lg:right-[140px] xl:right-[220px]`
-                : `left-[140px]  w-[355px] border border-[#F0F0F0] bg-white p-4 md:absolute md:top-[500px] md:left-[20px] md:h-[315.4px] md:w-[522px] md:p-7 lg:top-[40px] xl:left-[220px]`
-            }
-          >
+        <div className="relative">
+          <div className={style.info}>
             <div className="max-w-lg">
               <P>
                 {" "}

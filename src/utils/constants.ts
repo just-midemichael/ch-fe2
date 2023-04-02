@@ -47,7 +47,7 @@ export const hotel: IHotel = {
   Last_updated: ""
 };
 
-export const Room: IRoom = {
+export const room: IRoom = {
   Id: "63a096c52f40d02bb5e2d447",
   HotelId: "63a0308f2f40d02bb5e2d445",
   Name: "Room 306",
@@ -65,8 +65,8 @@ export const Room: IRoom = {
   Last_updated: "",
   Medias: [
     {
-      Path: "",
-      Type: undefined,
+      Path: "https://cityhotels.s3.amazonaws.com/hotel2.png",
+      Type: 2,
       Status: false
     }
   ],
