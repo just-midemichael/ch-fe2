@@ -1,0 +1,35 @@
+.gridBase {
+  @apply w-full h-full rounded-t-lg
+}
+
+.listBase{
+  @apply w-full h-full rounded-l-lg
+}
+
+
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeletonList {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.h4 {
+  color: black;
+  font-weight: 700;
+}
+
+.h6 {
+  color: black;
+}
+
+@keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+}

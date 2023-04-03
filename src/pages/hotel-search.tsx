@@ -3,10 +3,10 @@ import type { ChangeEvent } from "react";
 import Button from "@/components/shared/button/Button";
 import Checkbox from "@/components/shared/checkbox/Checkbox";
 import Dropdown from "@/components/shared/dropdown/Dropdown";
-import Hotel from "@/components/shared/hotelCard/Hotel";
+// import Hotel from "@/components/shared/hotelCard/Hotel";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
-import { hotelDatas } from "@/utils/constants";
+// import { hotelDatas } from "@/utils/constants";
 import { RxReset } from "react-icons/rx";
 import { SlMenu } from "react-icons/sl";
 
@@ -179,7 +179,7 @@ export default function HotelList() {
                 <h1>List</h1>
               </div>
 
-              {hotelDatas.map((hotel, index) => (
+              {/* {hotelDatas.map((hotel, index) => (
                 <Hotel
                   key={index}
                   path={hotel.path}
@@ -187,7 +187,7 @@ export default function HotelList() {
                   info={hotel.info}
                   favourite={hotel.favourite}
                 />
-              ))}
+              ))} */}
             </div>
           </div>
         </div>

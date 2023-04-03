@@ -29,9 +29,21 @@ module.exports = {
         grey70: "#424242",
         grey80: "#B3B3B3",
         grey90: "#545454",
+        grey100: "#DFDFE6",
 
+        black10: "#D7D7D7",
         black20: "#070707",
-        black: "#2A2A2B"
+        black: "#2A2A2B",
+
+        white10: "#FCFCFD",
+
+        green10: "#05A660",
+        green20: "#EBF8F1",
+        red10: "#E53535",
+        red20: "#FFEBEB",
+        blue10: "##3772FF",
+        yellow10: "#FF8800",
+        yellow20: "#FFF3D8"
       },
       fontFamily: {
         playfair: ['"Playfair Display"', "system-ui"],
