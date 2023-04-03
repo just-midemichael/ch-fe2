@@ -9,6 +9,10 @@
 
 
 .skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeletonList {
     animation: skeleton-loading 1s linear infinite alternate;
 }
 

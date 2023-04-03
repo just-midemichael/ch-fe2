@@ -1,8 +1,7 @@
 import Button from "@/components/shared/button/Button";
-import Hotel from "@/components/shared/hotelCard/Hotel";
+// import Hotel from "@/components/shared/hotelCard/Hotel";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
-import { hotelData } from "@/utils/constants";
 
 export default function HotelList() {
   return (
@@ -25,16 +24,19 @@ export default function HotelList() {
           </Button>
         </div>
 
-        <div className="mb-5 ml-[48px] mt-7 grid grid-cols-4  gap-4 overflow-x-auto px-[53px]">
-          {hotelData.map((hotel, index) => (
+        <div className="ml-[48px] mt-7 mb-5 grid grid-cols-4  gap-4 overflow-x-auto px-[53px]">
+          {/* {hotelData.map((hotel: any, index: number) => (
             <Hotel
               key={index}
               path={hotel.path}
               featured={hotel.featured}
               info={hotel.info}
               favourite={hotel.favourite}
+              hotel={{
+                name: ""
+              }}
             />
-          ))}
+          ))} */}
         </div>
       </Main>
     </>
