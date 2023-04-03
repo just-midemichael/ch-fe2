@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/enforces-negative-arbitrary-values */
 import { H3, H5, P, P2 } from "@/components/shared/headings/Headings";
 import React from "react";
 import InvestmentIcon from "@/assets/icons/investment.svg";
@@ -10,9 +11,9 @@ import Img from "@/components/shared/images/Image";
 
 const RegisterHotelComponent = () => {
   return (
-    <div className="flex items-center justify-center gap-20 bg-primary50 lg:h-[880px]">
+    <div className="-mx-[8rem] flex items-center justify-center gap-20 bg-primary50 lg:h-[880px]">
       <div className="relative">
-        <div className="absolute top-[30px] left-[-50px] z-10 flex items-center gap-3 rounded-lg bg-white p-[19px]">
+        <div className="absolute left-[-50px] top-[30px] z-10 flex items-center gap-3 rounded-lg bg-white p-[19px]">
           <div className="flex h-[55px] w-[55px] items-center justify-center rounded-full bg-black">
             <HomeIcon />
           </div>
@@ -36,7 +37,7 @@ const RegisterHotelComponent = () => {
           className="z-0 h-[602px] w-[520px] rounded-[10px]"
         />
       </div>
-      <div className="">
+      <div>
         <H3>Register your Hotel</H3>
         <P2 className="mt-5 w-[309px] text-[13px] font-[300] leading-7">
           As the complexity of buildings to increase, the field of architecture.

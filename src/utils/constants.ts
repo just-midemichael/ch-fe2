@@ -1,4 +1,6 @@
 import type { IHotel } from "@/services/hotel/payload";
+import type { IRoom } from "@/services/room/payload";
+
 import { Success } from "../assets/icons/success";
 import { Error } from "../assets/icons/error";
 import { Warning } from "../assets/icons/warning";
@@ -48,101 +50,33 @@ export const hotel: IHotel = {
   Created_at: "",
   Last_updated: ""
 };
-export const hotelData = [
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  },
-  {
-    path: "/hotel.png",
-    featured: true,
-    info: false,
-    favourite: false
-  }
-];
+
+export const room: IRoom = {
+  Id: "63a096c52f40d02bb5e2d447",
+  HotelId: "63a0308f2f40d02bb5e2d445",
+  Name: "Room 306",
+  Description:
+    "This is our regular standard room with tables chairs and tv set",
+  Price: 40000,
+  PromoCost: 37500,
+  MaxGuest: 2,
+  Quantity: 10,
+  NumberAvailable: 5,
+  Bed: "Standard",
+  CancellationFee: 0,
+  Created_at: "",
+  Facilities: [],
+  Last_updated: "",
+  Medias: [
+    {
+      Path: "https://cityhotels.s3.amazonaws.com/hotel2.png",
+      Type: 2,
+      Status: false
+    }
+  ],
+  PrePayment: false,
+  Refundable: false,
+  RefundableDate: "",
+  SEO: "",
+  Slug: ""
+};

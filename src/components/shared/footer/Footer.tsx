@@ -16,7 +16,7 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
   return (
     <footer>
       {subscription && (
-        <div className="flex items-center justify-between bg-grey50 p-4 lg:p-12">
+        <div className={styles.socials}>
           <div className="flex items-center gap-2">
             <HiOutlineMailOpen className="text-[4rem] text-primary400" />
             <div>
@@ -62,7 +62,7 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
         </div>
       )}
 
-      <div className="bg-black20 p-4 lg:px-12 lg:pt-6 lg:pb-10">
+      <div className={styles.terms}>
         <div className="mx-auto w-max">
           <Img
             path="/logo.png"

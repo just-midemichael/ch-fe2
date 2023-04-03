@@ -1,0 +1,22 @@
+.bg {
+  @apply fixed top-0 left-0 z-[100] flex h-screen w-screen items-center 
+  justify-center bg-[#101318B2] bg-opacity-100;
+}
+
+.modal {
+  @apply z-20 rounded-[43px] max-w-[740px] text-center min-w-[40%];
+}
+
+.pattern {
+  &__plain {
+    @apply bg-inherit;
+  }
+
+  &__filled {
+    @apply bg-white;
+  }
+}
+
+.overlay {
+  @apply absolute top-0 left-0 h-full w-full blur-3xl;
+}
