@@ -1,30 +1,26 @@
-import { useState } from "react";
-import type { ChangeEvent } from "react";
-import Button from "@/components/shared/button/Button";
-import Checkbox from "@/components/shared/checkbox/Checkbox";
-import Dropdown from "@/components/shared/dropdown/Dropdown";
-// import Hotel from "@/components/shared/hotelCard/Hotel";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
-// import { hotelDatas } from "@/utils/constants";
-import { RxReset } from "react-icons/rx";
-import { SlMenu } from "react-icons/sl";
+import Select from "react-select";
+
+import { H3 } from "@/components/shared/headings/Headings";
+import Button from "@/components/shared/button/Button";
+import SearchComponent from "@/components/shared/searchComponent/SearchComponent";
+import { useMemo, useState } from "react";
+import { mockHotel } from "@/utils/constants";
+import type { IHotel } from "@/services/hotel/payload";
+import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
+import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
 
 export default function HotelList() {
-  const locationOptions = [
-    {
-      label: "All cities",
-      value: "cities"
-    },
-    {
-      label: "Hotel",
-      value: "hotel"
-    },
-    {
-      label: "Motel",
-      value: "motel"
-    }
-  ];
+  const [listType, setListType] = useState<"grid" | "list">("grid");
+
+  const hotels: IHotel[] = new Array(10).fill(mockHotel);
+
+  const HotelItem = useMemo(
+    () => (listType === "grid" ? HotelGridItem : HotelListItem),
+    [listType]
+  );
+
   const options = [
     {
       label: "Newest",
@@ -33,161 +29,67 @@ export default function HotelList() {
     {
       label: "Oldest",
       value: "oldest"
-    },
-    {
-      label: "Latest",
-      value: "latest"
     }
   ];
-
-  const [dropdownValue, setDropdownValue] = useState("");
-  const handleDropdownChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setDropdownValue(e.target.value);
-  };
-
-  const [checkboxes, setCheckboxes] = useState({
-    Hotel: false,
-    Houses: false,
-    Motel: false,
-    ShortletApartments: false
-  });
-
-  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setCheckboxes((prevState) => {
-      return { ...prevState, [e.target.name]: e.target.checked };
-    });
-  };
 
   return (
     <>
       <Main>
-        <h1 className="ml-[140px] text-[24px] font-semibold">Hotels Near Me</h1>
-        <div className="flex flex-col items-center justify-center">
-          <div className="relative ml-[-20px] mt-6 flex items-center">
-            <SearchInput
-              placeholder="Search ..."
-              className="w-[1000px] flex-1 pr-12 outline-none"
-            />
+        <H3>Hotels Near Me</H3>
+        <div className="mb-10 mt-8 flex">
+          <SearchInput
+            placeholder="Search ..."
+            className="w-full grow outline-none"
+          />
 
-            <Button
-              color="primary"
-              className="top-3.7 absolute right-[8px] "
-              size="md"
-            >
-              Search
-            </Button>
-          </div>
+          <Button
+            color="primary"
+            className="ml-[-20px] w-[164px] rounded-l-none px-10 "
+            size="md"
+            style={{ borderRadius: "0 6px 6px 0" }}
+          >
+            Search
+          </Button>
+        </div>
 
+        <div className=" flex gap-10">
           <div>
-            <div className="ml-8 mt-12 w-80 rounded-2xl border border-gray-300 p-8">
-              <h1 className="py-3 text-[16px] font-bold">Location</h1>
-              <Dropdown
-                options={locationOptions}
-                onChange={handleDropdownChange}
-                dropdownValue={dropdownValue}
-              />
-              <h1 className="py-3 text-[16px] font-bold">Property Type</h1>
-              <Checkbox
-                label="Hotel"
-                value={checkboxes.Hotel}
-                onChange={handleCheckboxChange}
-              />
-              <Checkbox
-                label="Houses"
-                value={checkboxes.Houses}
-                onChange={handleCheckboxChange}
-              />
-              <Checkbox
-                label="Motel"
-                value={checkboxes.Motel}
-                onChange={handleCheckboxChange}
-              />
-              <Checkbox
-                label="Shortlet Apartments"
-                value={checkboxes.ShortletApartments}
-                onChange={handleCheckboxChange}
-              />
-              <h1 className="py-3 text-[16px] font-bold">Price Range</h1>
-              <div className="flex items-center space-x-4">
-                <SlMenu className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-700 " />
-                <input type="range" className="w-full" />
-                <SlMenu className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-700" />
-              </div>
-
-              <form className="py-3">
-                <input
-                  className="h-12 w-28 rounded-lg border border-gray-300 pl-2 text-sm placeholder:text-gray-600 focus:outline-none"
-                  placeholder="$ min."
-                  type="text"
-                ></input>
-                -
-                <input
-                  className="h-12 w-28 rounded-lg border border-gray-300 pl-2 text-sm placeholder:text-gray-600 focus:outline-none"
-                  placeholder="$ max."
-                  type="text"
-                ></input>
-                <div>
-                  <h1 className="py-3 text-[16px] font-bold">Bedrooms</h1>
-                  <input
-                    className="h-12 w-12 rounded-l-lg border border-gray-300 pl-2 text-sm outline-none placeholder:text-gray-600"
-                    placeholder="Any"
-                    type="text"
-                  ></input>
-                  <input
-                    className="h-12 w-12 border border-gray-300 pl-2 text-sm outline-none placeholder:text-gray-600"
-                    placeholder="1+"
-                    type="text"
-                  ></input>
-                  <input
-                    className="h-12 w-12 border border-gray-300 pl-2 text-sm outline-none placeholder:text-gray-600"
-                    placeholder="2+"
-                    type="text"
-                  ></input>
-                  <input
-                    className="h-12 w-12 border border-gray-300 pl-2 text-sm outline-none placeholder:text-gray-600"
-                    placeholder="3+"
-                    type="text"
-                  ></input>
-                  <input
-                    className="h-12 w-12 rounded-r-lg border border-gray-300 pl-2 text-sm outline-none placeholder:text-gray-600"
-                    placeholder="4+"
-                    type="text"
-                  ></input>
-                </div>
-                <p className="flex items-center py-3">
-                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full border border-gray-700">
-                    <RxReset />
-                  </span>
-                  <span>reset all filters</span>
-                </p>
-              </form>
-            </div>
-
-            <div className="ml-80 mt-[-40rem] grid grid-cols-2 gap-14 overflow-x-auto pb-5 pl-36">
-              <h1 className="mt-[2rem]">Showing 1-10 of 13 results</h1>
-              <div className="mt-[1rem] flex items-center justify-between gap-4">
+            <SearchComponent />
+          </div>
+          <div className="grow">
+            <div className="flex items-center justify-between">
+              <h1 className="">Showing 1-10 of 13 results</h1>
+              <div className="flex items-center justify-between gap-5">
                 <span className=" whitespace-nowrap ">Sort By</span>
-                <Dropdown
+                <Select
+                  classNamePrefix="select_outline"
+                  className="h-[29px] w-[105px] bg-transparent focus:outline-none"
                   options={options}
-                  onChange={handleDropdownChange}
-                  dropdownValue={dropdownValue}
+                  placeholder="Latest"
                 />
                 <span className="h-5 border-l border-gray-300"></span>
-                <h1>Grid</h1>
+                <Button onClick={() => setListType("grid")} color="text">
+                  Grid
+                </Button>
 
                 <span className="h-5 border-l border-gray-300"></span>
-                <h1>List</h1>
+                <Button onClick={() => setListType("list")} color="text">
+                  List
+                </Button>
               </div>
-
-              {/* {hotelDatas.map((hotel, index) => (
-                <Hotel
-                  key={index}
-                  path={hotel.path}
-                  featured={hotel.featured}
-                  info={hotel.info}
-                  favourite={hotel.favourite}
-                />
-              ))} */}
+            </div>
+            <div
+              className={` ${
+                listType === "grid"
+                  ? "grid grid-flow-col grid-rows-6  gap-6"
+                  : "flex flex-col gap-4"
+              }`}
+            >
+              {hotels.map((hotel, index) => (
+                <div className="mt-8" key={`hotel-${hotel.Id}-${index}`}>
+                  <HotelItem hotel={hotel} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

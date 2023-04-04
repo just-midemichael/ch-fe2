@@ -10,11 +10,11 @@
 
 .input_wrapper {
   width: 100%;
-  @apply border flex items-center px-3 py-4 my-3  border-grey30 h-[54px] rounded-lg focus:outline-0 focus:border-primary400;
+  @apply border flex items-center px-3 py-4  border-grey30 h-[54px] rounded-lg focus:outline-0 focus:border-primary400;
 }
 
 .input_prepend {
-  @apply border-0 w-[15px] items-center justify-center rounded-l-none rounded-r-lg;
+  @apply border-0 w-[25px] items-center justify-center rounded-l-none rounded-r-lg;
 }
 
 .search {
