@@ -1,41 +1,33 @@
+import Carousel from "@/components/shared/carousel/Carousel";
 import Meta from "@/components/shared/meta/Meta";
-import Main from "@/layout/main/Main";
-import HorizontalScroll from "@/components/shared/horizontalScroll/HorizontalScroll";
-import RegisterHotelComponent from "@/components/home/register-hotel/RegisterHotel";
-import Hotel from "@/components/shared/hotelCard/Hotel";
+import RoomCard from "@/components/shared/roomCard/Room";
+import { hotel, room } from "@/utils/constants";
+import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
+import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import React from "react";
-import { hotelData } from "@/utils/constants";
 
 export default function Home() {
+  const medias = ["/Banner.png", "/hotel.png", "/featured.png", "/city.png"];
+
   return (
     <>
       <Meta
         title="Welcome to City Hotels"
         description="Home page of City Hotels, Nigeria"
       />
+      <div className="mx-auto my-10 w-[683px]">
+        <Carousel medias={medias} />
+      </div>
 
-      <Main>
-        <div className="my-12">
-          <HorizontalScroll
-            title="Explore Our Featured Hotels"
-            subTitle="Aliquam lacinia diam quis lacus euismod"
-            showPagination
-          >
-            {hotelData.map((hotel, index) => (
-              <React.Fragment key={index}>
-                <Hotel
-                  className="mx-3"
-                  featured={hotel.featured}
-                  info={hotel.info}
-                  favourite={hotel.favourite}
-                  path={hotel.path}
-                />
-              </React.Fragment>
-            ))}
-          </HorizontalScroll>
-        </div>
-        <RegisterHotelComponent />
-      </Main>
+      <div className="mx-7 mt-7 flex flex-col gap-4">
+        <RoomCard room={room} inverted />
+        <RoomCard room={room} />
+      </div>
+      <div className=" ml-10 mt-4 flex flex-col gap-7">
+        <HotelListItem hotel={hotel} featured={true} />
+        <HotelListItem hotel={hotel} />
+        <HotelGridItem hotel={hotel} />
+      </div>
     </>
   );
 }

@@ -2,7 +2,6 @@ import Button from "@/components/shared/button/Button";
 // import Hotel from "@/components/shared/hotelCard/Hotel";
 import SearchInput from "@/components/shared/searchInput/SearchInput";
 import Main from "@/layout/main/Main";
-// import { hotelData } from "@/utils/constants";
 
 export default function HotelList() {
   return (
@@ -33,6 +32,9 @@ export default function HotelList() {
               featured={hotel.featured}
               info={hotel.info}
               favourite={hotel.favourite}
+              hotel={{
+                name: ""
+              }}
             />
           ))} */}
         </div>

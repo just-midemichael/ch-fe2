@@ -16,7 +16,7 @@ const Hotel: FC<HotelProps> = ({
   path
 }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${styles.base}  ${className}`}>
       <Img
         id="pic"
         path={`${path}`}
@@ -25,14 +25,14 @@ const Hotel: FC<HotelProps> = ({
       />
 
       {featured && (
-        <div className="border-md absolute top-3 left-3 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
+        <div className="border-md absolute left-3 top-3 flex items-center gap-1 rounded bg-[#FE8501]  px-3 py-1 text-white">
           <AiOutlineThunderbolt className="" />
           <H6 className="text-[9px] text-white">FEATURED</H6>
         </div>
       )}
 
       {favourite && (
-        <div className="absolute top-5 right-5 flex flex-col gap-1 text-white">
+        <div className="absolute right-5 top-5 flex flex-col gap-1 text-white">
           <div className=" rounded-md bg-[#181A20] p-1 opacity-90">
             <AiOutlineHeart className="cursor-pointer text-[15px] hover:text-[#FE8501]" />
           </div>
