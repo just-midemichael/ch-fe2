@@ -13,7 +13,7 @@ export const toastIcons = {
   warning: Warning
 };
 
-export const hotel: IHotel = {
+export const mockHotel: IHotel = {
   Id: "63a0308f2f40d02bb5e2d445",
   Name: "De' Lovers Hotel",
   Slogan: "De' Best Hotel In Town",

@@ -3,4 +3,5 @@ export default interface SearchInputProps
   label?: string;
   name?: string;
   placeholder?: string;
+  className?: string;
 }

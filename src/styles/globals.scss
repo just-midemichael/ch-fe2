@@ -56,3 +56,40 @@ input::placeholder {
 .select__menu {
   width: 200px !important;
 }
+
+.select_outline__single-value,
+.select_outline_input-container,
+.select_outline__placeholder {
+  font-size: 16px !important;
+  padding: 0  !important;
+}
+
+.select_outline__value-container{
+  padding: 0  !important;
+}
+
+.select_outline__indicator-separator {
+  display: none !important;
+}
+
+.select_outline__menu {
+  width: 120px !important;
+}
+
+.select_outline__control {
+  background: transparent !important;
+  border: none !important;
+  margin-top: -4px !important;
+  padding: 0  !important;
+}
+
+.select_outline__control--is-focused{
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.location__filter__control{
+  height: 50px;
+}

@@ -29,7 +29,7 @@
 
 .variants {
   &__primary {
-    @apply bg-[#FE8501] text-white
+    @apply bg-primary400 text-white
   }
 
   &__secondary {
@@ -45,6 +45,9 @@
   }
 
   &__media {
-    @apply text-black hover:bg-[#FE8501] hover:text-white
+    @apply text-black hover:bg-primary400 hover:text-white
+  }
+  &__text {
+    @apply text-black text-primary400 hover:text-white
   }
 }

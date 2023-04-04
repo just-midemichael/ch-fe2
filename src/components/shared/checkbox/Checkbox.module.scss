@@ -1,9 +1,14 @@
 .check {
-  display: flex;
+  @apply flex gap-2 items-center;
 }
 
 .checkbox {
-  width: 25px;
   height: 13px;
   border: 1px solid #ccc;
+  display: flex;
+}
+
+.label{
+  font-size: 14px;
+  font-weight: 400;
 }
