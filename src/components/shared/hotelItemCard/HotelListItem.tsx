@@ -14,7 +14,7 @@ const HotelListItem: FC<HotelItem> = ({
   hotel: { Name, Address, Medias, AveragePrice }
 }) => {
   return (
-    <div className={`${className} flex`}>
+    <div className={`${className} flex w-[771px] `}>
       <div className="relative h-[250px] w-[290px]">
         <Img
           path={`${Medias.find((item) => item.Type === 2)?.Path}`}
@@ -34,7 +34,7 @@ const HotelListItem: FC<HotelItem> = ({
         </div>
       </div>
 
-      <div className="`border-solid  border- w-[40vw] rounded-r-lg border border-[#C2C2C2] px-3 pl-5 pr-7">
+      <div className="`border-solid  border- rounded-r-lg border border-[#C2C2C2] px-3 pl-5 pr-7">
         <div className="py-5">
           <H4 className={`${styles.h4}`}>{`${Name}`}</H4>
           <H6 className={styles.h6}>{`${Address.City}, ${Address.Country}`}</H6>

@@ -1,7 +1,7 @@
 import Carousel from "@/components/shared/carousel/Carousel";
 import Meta from "@/components/shared/meta/Meta";
 import RoomCard from "@/components/shared/roomCard/Room";
-import { hotel, room } from "@/utils/constants";
+import { mockHotel, room } from "@/utils/constants";
 import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
 import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import React from "react";
@@ -24,9 +24,9 @@ export default function Home() {
         <RoomCard room={room} />
       </div>
       <div className=" ml-10 mt-4 flex flex-col gap-7">
-        <HotelListItem hotel={hotel} featured={true} />
-        <HotelListItem hotel={hotel} />
-        <HotelGridItem hotel={hotel} />
+        <HotelListItem hotel={mockHotel} featured={true} />
+        <HotelListItem hotel={mockHotel} />
+        <HotelGridItem hotel={mockHotel} />
       </div>
     </>
   );

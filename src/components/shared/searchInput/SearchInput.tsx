@@ -1,22 +1,21 @@
-import { AiOutlineSearch } from "react-icons/ai";
+import SearchIcon from "@/assets/icons/search.svg";
 import { Label } from "../headings/Headings";
 import styles from "./SearchInput.module.scss";
-import type searchInputProps from "./SearchInput.props";
+import type SearchInputProps from "./SearchInput.props";
 
-const SearchInput: React.FC<searchInputProps> = ({
+const SearchInput: React.FC<SearchInputProps> = ({
   label,
   name,
   placeholder,
+  className,
   ...rest
 }) => {
   return (
-    <div>
-      <Label htmlFor={name} className="py-3">
-        {label}
-      </Label>
+    <div className={`${className}`}>
+      <Label htmlFor={name}>{label}</Label>
       <div className={styles.input_wrapper}>
         <div className={styles.input_prepend}>
-          <AiOutlineSearch />
+          <SearchIcon />
         </div>
         <input
           className={styles.search}
