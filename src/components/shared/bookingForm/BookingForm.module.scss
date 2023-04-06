@@ -1,0 +1,28 @@
+.formContainer {
+    @apply border-[#E5E5E5] border w-[461px] h-[541px] pt-3 relative
+}
+
+.select {
+    @apply h-[30px] w-[175px] px-0 text-[#333333] border-[#E5E5E5] border rounded-md pl-2
+}
+
+.datePicker {
+    @apply h-[44px] w-[175px] px-0 text-[#333333] border-[#E5E5E5] border rounded-md pl-7 cursor-pointer relative  
+}
+
+.inputs {
+    @apply grid grid-cols-2 gap-7 mb-7
+}
+
+.label {
+    @apply font-bold 
+}
+
+.small {
+    @apply text-[#8C8C8C] italic my-4
+}
+
+.bookContainer {
+    @apply bg-[#FFF2DE] px-3 py-5 flex items-center justify-between absolute w-full bottom-0
+}
+

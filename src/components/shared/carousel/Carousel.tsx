@@ -26,10 +26,10 @@ const Carousel: React.FC<CarouselProps> = ({
         <Img
           path={medias[activeIndex] || ""}
           name={medias[activeIndex] || ""}
-          className="h-[525px] w-full"
+          className="h-[525px] w-[684px]"
         />
       </div>
-      <div className="mt-4 flex w-full justify-center gap-2 overflow-x-auto">
+      <div className="mt-4 flex w-full gap-2 overflow-x-auto">
         {medias.map((item, index) => (
           <div
             onClick={() => setActiveIndex(index)}

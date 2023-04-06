@@ -48,7 +48,7 @@ const RoomCard: FC<RoomProps> = ({ className, room, inverted }) => {
               <H3 className="pb-3 font-light">Standard Room</H3>
               <P2> {room.Description}</P2>
 
-              <div className="mt-7 mb-3 grid grid-cols-3 gap-3">
+              <div className="mb-3 mt-7 grid grid-cols-3 gap-3">
                 <div className="flex items-center gap-2">
                   <BsFillPersonFill className="text-[#FE8501]" />
                   <P2 className="md:text-[14px]">2 Adults</P2>

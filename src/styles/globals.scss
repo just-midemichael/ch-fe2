@@ -7,7 +7,7 @@ body {
 }
 
 input::placeholder {
-  color: white;
+  color: inherit;
 }
 
 .react-datepicker {
@@ -15,20 +15,11 @@ input::placeholder {
 }
 
 .select__input {
-  color: white !important;
+  color: inherit !important;
   padding: 0;
 }
 
-.select__indicator {
-  display: none !important;
-}
 
-.select__control {
-  background: transparent !important;
-  border: none !important;
-  margin-top: -4px !important;
-  padding: 0  !important;
-}
 
 .select__control--is-focused{
   border: none !important;
@@ -41,9 +32,11 @@ input::placeholder {
 .select_input-container,
 .select__placeholder {
   font-size: 16px !important;
-  color: white !important;
+  color: inherit !important;
   padding: 0  !important;
 }
+
+
 
 .select__value-container{
   padding: 0  !important;
@@ -55,6 +48,7 @@ input::placeholder {
 
 .select__menu {
   width: 200px !important;
+  color: #333333 !important;
 }
 
 .select_outline__single-value,
@@ -70,6 +64,17 @@ input::placeholder {
 
 .select_outline__indicator-separator {
   display: none !important;
+}
+
+.select__indicator {
+  display: none !important;
+}
+
+.select__control {
+  background: transparent !important;
+  border: none !important;
+  margin-top: -4px !important;
+  padding: 0  !important;
 }
 
 .select_outline__menu {

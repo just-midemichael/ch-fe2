@@ -104,7 +104,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
           )}
         </div>
       </div>
-      <div className="mt-10 flex overflow-x-auto" ref={ref} onScroll={onScroll}>
+      <div className="ml-5 mt-10 flex overflow-x-auto" ref={ref} onScroll={onScroll}>
         {children}
       </div>
     </div>
