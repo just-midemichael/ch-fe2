@@ -7,13 +7,12 @@
   font-size: 1em;
   padding: 0 8rem;
   cursor: pointer;
-  background: inherit;
+  @apply fixed inset-x-0  top-0 z-10;
 }
 
 .theme {
   &__light {
     color: black;
-    border-bottom: 1px solid #dddddd;
   }
 
   &__dark {

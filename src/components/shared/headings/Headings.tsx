@@ -35,7 +35,7 @@ export const H4: React.FC<JSX.IntrinsicElements["h4"]> = (props) => {
   return (
     <h4
       {...props}
-      className={`font-poppins text-[20px] font-medium leading-[35px] text-white ${props.className}`}
+      className={`font-poppins text-[20px] font-medium leading-[35px]  ${props.className}`}
     >
       {props.children}
     </h4>

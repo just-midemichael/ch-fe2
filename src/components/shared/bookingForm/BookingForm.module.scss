@@ -1,9 +1,13 @@
 .formContainer {
-    @apply border-[#E5E5E5] border w-[461px] h-[541px] pt-3 relative
+    @apply border-[#E5E5E5] border rounded-md w-[461px] h-[541px] pt-3 relative;
+
+    .booking__select__value-container{
+       @apply min-h-[44px];
+    }
 }
 
 .select {
-    @apply h-[30px] w-[175px] px-0 text-[#333333] border-[#E5E5E5] border rounded-md pl-2
+    // @apply h-[44px] mt-1 w-[175px] px-0 text-[#333333] border-[#E5E5E5] border rounded-md pl-2
 }
 
 .datePicker {
@@ -11,18 +15,25 @@
 }
 
 .inputs {
-    @apply grid grid-cols-2 gap-7 mb-7
+    @apply grid grid-cols-2 gap-x-[60px] gap-y-8;
+    .booking__select__value-container{
+        @apply min-h-[44px];
+     }
 }
 
 .label {
-    @apply font-bold 
+    @apply font-bold leading-[29px];
 }
 
 .small {
-    @apply text-[#8C8C8C] italic my-4
+    @apply text-[#8C8C8C] italic;
 }
 
 .bookContainer {
-    @apply bg-[#FFF2DE] px-3 py-5 flex items-center justify-between absolute w-full bottom-0
+    @apply bg-[#FFF2DE] px-5 py-3 flex items-center justify-between w-full 
+}
+
+.totalPrice{
+    @apply text-right;
 }
 

@@ -6,6 +6,10 @@ body {
   font-family: 'Poppins',  'Playfair Display', serif;
 }
 
+.app__container{
+  @apply px-[8rem];
+}
+
 input::placeholder {
   color: inherit;
 }
@@ -97,4 +101,8 @@ input::placeholder {
 
 .location__filter__control{
   height: 50px;
+}
+
+.booking__select__value-container{
+  @apply min-h-[44px];
 }

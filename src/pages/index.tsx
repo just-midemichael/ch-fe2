@@ -1,6 +1,6 @@
 import Meta from "@/components/shared/meta/Meta";
 import React from "react";
-import HotelRoomPage from "./hotel-room-page";
+import HotelRoomPage from "./room";
 
 export default function Home() {
   return (

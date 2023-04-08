@@ -18,15 +18,14 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
   const [currentPosition, setCurrentPosition] = useState(1);
   const [clientWidth, setClientWidth] = useState(0);
 
-  const scrollWidth = useMemo(
-    () => ref.current?.scrollWidth || 0,
-    [ref.current?.scrollWidth]
-  );
+  const scrollWidth = useMemo(() => ref.current?.scrollWidth || 0, [
+    ref.current?.scrollWidth
+  ]);
 
-  const maxScroll = useMemo(
-    () => scrollWidth - clientWidth,
-    [clientWidth, scrollWidth]
-  );
+  const maxScroll = useMemo(() => scrollWidth - clientWidth, [
+    clientWidth,
+    scrollWidth
+  ]);
 
   const indicators = useMemo(() => {
     const b = [];
@@ -104,7 +103,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
           )}
         </div>
       </div>
-      <div className="ml-5 mt-10 flex overflow-x-auto" ref={ref} onScroll={onScroll}>
+      <div className="mt-10 flex overflow-x-auto" ref={ref} onScroll={onScroll}>
         {children}
       </div>
     </div>

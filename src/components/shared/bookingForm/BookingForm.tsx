@@ -1,9 +1,9 @@
-import { BsCalendar2DateFill } from "react-icons/bs";
+import Calendar2Icon from "@/assets/icons/calendar-2.svg";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { useState } from "react";
 import Select from "react-select";
 import DatePicker from "react-datepicker";
-import { Label, P } from "../headings/Headings";
+import { H4, Label, P } from "../headings/Headings";
 import styles from "./BookingForm.module.scss";
 import type BookingFormProps from "./BookingForm.props";
 import "react-datepicker/dist/react-datepicker.css";
@@ -27,14 +27,16 @@ const BookingForm: React.FC<BookingFormProps> = () => {
   return (
     <div>
       <div className={`${styles.formContainer}`}>
-        <P className="my-3 text-center text-[26px]">Bookings</P>
+        <H4 className="text-center text-[26px] uppercase leading-7 text-black">
+          Booking
+        </H4>
 
-        <div className="px-8">
+        <div className="mt-8 px-5">
           <div className={`${styles.inputs}`}>
             <div>
-              <Label className={`${styles.label}`}>Check-In</Label>
+              <Label className={`${styles.label}`}>Check-in</Label>
               <div className="flex items-center">
-                <BsCalendar2DateFill className="absolute z-10 ml-2  text-[#333333]" />
+                <Calendar2Icon className="absolute z-10 mx-2 text-[#333333]" />
                 <DatePicker
                   selected={startDate}
                   onChange={(date) => date && setStartDate(date)}
@@ -44,9 +46,9 @@ const BookingForm: React.FC<BookingFormProps> = () => {
             </div>
 
             <div>
-              <Label className={`${styles.label}`}>Check-Out</Label>
+              <Label className={`${styles.label}`}>Check-out</Label>
               <div className="flex items-center">
-                <BsCalendar2DateFill className="absolute z-10 ml-2  text-[#333333]" />
+                <Calendar2Icon className="absolute z-10 mx-2 text-[#333333]" />
                 <DatePicker
                   selected={endDate}
                   placeholderText="Click to select"
@@ -61,48 +63,38 @@ const BookingForm: React.FC<BookingFormProps> = () => {
             <div>
               <Label className={`${styles.label}`}>Guest</Label>
               <Select
-                classNamePrefix="select"
-                className={`${styles.select}`}
-                defaultValue={services[0]}
-                name="services"
-                options={services}
-              />
-            </div>
-
-            <div>
-              <Label className={`${styles.label}`}>Rooms</Label>
-              <Select
-                classNamePrefix="select"
-                className={`${styles.select}`}
-                defaultValue={services[2]}
-                name="services"
-                options={services}
-              />
-            </div>
-
-            <div>
-              <Label className={`${styles.label}`}>Services</Label>
-              <Select
-                classNamePrefix="select"
-                className={`${styles.select}`}
-                defaultValue={services[0]}
-                name="guest"
-                options={guest}
-              />
-            </div>
-
-            <div className="mt-6">
-              <Select
-                classNamePrefix="select"
+                classNamePrefix="booking__select"
                 className={`${styles.select}`}
                 defaultValue={guest[0]}
                 name="guest"
                 options={guest}
               />
             </div>
+
+            <div>
+              <Label className={`${styles.label}`}>Rooms</Label>
+              <Select
+                classNamePrefix="booking__select"
+                className={`${styles.select}`}
+                defaultValue={guest[2]}
+                name="rooms"
+                options={guest}
+              />
+            </div>
+          </div>
+          <div className="my-8">
+            <Label className={`${styles.label}`}>Services</Label>
+            <Select
+              classNamePrefix="booking__select"
+              className={`${styles.select}`}
+              defaultValue={services[0]}
+              name="services"
+              options={services}
+              isMulti
+            />
           </div>
 
-          <div className="flex items-center gap-1">
+          <div className="my-8 flex items-center gap-1">
             <RiErrorWarningLine className="text-[#FE8501]" />
             <small className={`${styles.small}`}>info: no refund</small>
           </div>
@@ -118,7 +110,7 @@ const BookingForm: React.FC<BookingFormProps> = () => {
               <P className="text-[21.47px] font-bold">&#8358;12, 500</P>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="mt-4 flex items-center justify-end gap-2">
               <P className="text-[9px]">Available Rooms: </P>{" "}
               <P className="font-medium text-[15.625px;]"> 3</P>
             </div>
