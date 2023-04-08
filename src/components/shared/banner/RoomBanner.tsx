@@ -8,7 +8,7 @@ const RoomBanner: React.FC<BannerProps> = ({ path }) => {
     <div className={`${styles.roomBase}`}>
       <Img path={`${path}`} name="banner" className="h-full w-full" />
       <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center">
-        <div className="flex w-[942px] flex-col text-center align-middle">
+        <div className="flex w-full flex-col text-center align-middle">
           <H1 className="mb-4">Hotel Name</H1>
         </div>
       </div>

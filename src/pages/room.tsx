@@ -37,14 +37,14 @@ const HotelRoomPage: FC<MainProps> = () => {
       <RoomBanner path="/roomPageBanner.png" />
       <Main>
         <div className="app__container">
-          <div className="mt-20 flex items-start gap-8">
+          <div className="flex items-start gap-8 lg:mt-20">
             <Carousel medias={medias} autoSlide />
             <div className="hidden lg:block ">
               <BookingForm />
             </div>
           </div>
 
-          <div className="mt-20 max-w-[700px]">
+          <div className="mt-10 max-w-[700px] lg:mt-20">
             <H3 className="mb-5">Overview</H3>
             <P className="leading-[33px]">
               Our Vip Room offers a stunning view of the white sand beach. This
@@ -55,86 +55,105 @@ const HotelRoomPage: FC<MainProps> = () => {
             </P>
 
             <div className="mb-3 mt-7 grid grid-cols-3 gap-3">
-              <div className="flex items-center gap-2">
-                <ManIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">2 Adults</P2>
+              <div className="items-center gap-2 lg:flex">
+                <ManIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px]">
+                  2 Adults
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <DaughterIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">2 Children</P2>
+              <div className="items-center gap-2 lg:flex">
+                <DaughterIcon className="mx-auto  text-[25px] text-[#FE8501]  lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px] lg:my-0">
+                  2 Children
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <MeasureIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">1 Bedroom</P2>
+              <div className="items-center gap-2 lg:flex">
+                <MeasureIcon className="mx-auto  text-[25px] text-[#FE8501]  lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px] lg:my-0">
+                  1 Bedroom
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <BedIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">2 Beds</P2>
+              <div className="items-center gap-2 lg:flex">
+                <BedIcon className="mx-auto  text-[25px] text-[#FE8501]  lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px] lg:my-0">
+                  2 Beds
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <BathtubIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]"> Bath</P2>
+              <div className="items-center gap-2 lg:flex">
+                <BathtubIcon className="mx-auto  text-[25px] text-[#FE8501]  lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px] lg:my-0">
+                  {" "}
+                  Bath
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <ParkingIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Car Packing</P2>
+              <div className="items-center gap-2 lg:flex">
+                <ParkingIcon className="mx-auto  text-[25px] text-[#FE8501]  lg:mx-0" />
+                <P2 className="mb-5 mt-2 text-center md:text-[14px] lg:my-0">
+                  Car Packing
+                </P2>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 max-w-[700px]">
+          <div className="mt-5 max-w-[700px] lg:mt-12">
             <H3 className="mb-5">Free Amenities</H3>
 
-            <div className="mb-3 mt-7 grid grid-cols-4 gap-3 gap-x-0">
-              <div className="flex items-center gap-2">
-                <AirConditionerIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Air Conditioner</P2>
+            <div className="mb-3 mt-7 grid grid-cols-3  gap-3 gap-x-0 lg:grid-cols-4">
+              <div className="block items-center gap-2 text-center lg:flex">
+                <AirConditionerIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">
+                  Air Conditioner
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <TvMonitorIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Big TV</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <TvMonitorIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">Big TV</P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <WifiIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Wifi</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <WifiIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">Wifi</P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <KeyIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Door Key</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <KeyIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">Door Key</P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <CoffeeMachineIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Coffe Maker</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <CoffeeMachineIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">
+                  Coffe Maker
+                </P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <TissueBoxIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Tissue Box</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <TissueBoxIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="md:text-[14px mb-5] mt-2 lg:my-0">Tissue Box</P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <HairdryerIcon className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Hair Dryer</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <HairdryerIcon className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">Hair Dryer</P2>
               </div>
 
-              <div className="flex items-center gap-2">
-                <FaParking className="text-[25px] text-[#FE8501]" />
-                <P2 className="md:text-[14px]">Free Parking</P2>
+              <div className="block items-center gap-2 text-center lg:flex">
+                <FaParking className="mx-auto text-[25px] text-[#FE8501] lg:mx-0" />
+                <P2 className="mb-5 mt-2 md:text-[14px] lg:my-0">
+                  Free Parking
+                </P2>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-[70px] w-full bg-[#FFF9F6]  py-6">
+        <div className="mt-10 w-full bg-[#FFF9F6] py-6  lg:mt-20">
           <div className="app__container ">
             <HorizontalScroll
               label="The Best for you"

@@ -22,18 +22,18 @@ const Carousel: React.FC<CarouselProps> = ({
 
   return (
     <div className="w-full">
-      <div className="h-[525px]">
+      <div className="h-[300px] lg:h-[400px] xl:h-[525px]">
         <Img
           path={medias[activeIndex] || ""}
           name={medias[activeIndex] || ""}
-          className="h-[525px] w-[684px]"
+          className="h-[300px] w-full lg:h-[400px]  xl:h-[525px] xl:max-w-[684px]"
         />
       </div>
-      <div className="mt-4 flex w-full gap-2 overflow-x-auto">
+      <div className=" mt-4 hidden w-full gap-2 overflow-x-auto lg:flex">
         {medias.map((item, index) => (
           <div
             onClick={() => setActiveIndex(index)}
-            className={`h-[146px] w-[164px] cursor-pointer ${
+            className={`h-[100px] cursor-pointer lg:h-[90px] lg:w-[100px] xl:h-[146px] xl:w-[164px] ${
               activeIndex === index ? "border border-primary400" : ""
             }`}
             key={item}

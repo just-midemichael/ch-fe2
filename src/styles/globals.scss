@@ -7,7 +7,7 @@ body {
 }
 
 .app__container{
-  @apply px-[8rem];
+  @apply px-4 xl:px-[8rem];
 }
 
 input::placeholder {

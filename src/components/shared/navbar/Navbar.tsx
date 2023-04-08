@@ -33,7 +33,7 @@ const Navbar: FC<NavbarProps> = ({ theme = "light", defaultTransparent }) => {
       }`}
     >
       <div className="flex items-center md:gap-4 lg:gap-6">
-        <Img path="/logo.png" name="logo" className="h-[90px] w-[90px]" />
+        <Img path="/logo.png" name="logo" className={styles.img} />
         <div className="flex md:gap-4 lg:gap-8">
           {navbarItems.map((item, index) => (
             <span
@@ -52,7 +52,7 @@ const Navbar: FC<NavbarProps> = ({ theme = "light", defaultTransparent }) => {
       </div>
 
       <div
-        className={`flex items-center gap-3 font-poppins ${
+        className={`hidden items-center gap-3 font-poppins md:flex ${
           theme === "light" ? "text-primary400" : "white"
         }`}
       >
