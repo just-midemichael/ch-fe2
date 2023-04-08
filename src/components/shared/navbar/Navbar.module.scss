@@ -5,15 +5,18 @@
   font-family: "Barlow", sans-serif;
   font-weight: 600;
   font-size: 1em;
-  padding: 0 8rem;
   cursor: pointer;
-  background: inherit;
+  max-width: 100vw;
+  @apply fixed inset-x-0  top-0 z-10 lg:px-[8rem];
+}
+
+.img{
+  @apply h-[55px] w-[55px] lg:h-[90px] lg:w-[90px];
 }
 
 .theme {
   &__light {
     color: black;
-    border-bottom: 1px solid #dddddd;
   }
 
   &__dark {

@@ -1,33 +1,15 @@
-import Carousel from "@/components/shared/carousel/Carousel";
 import Meta from "@/components/shared/meta/Meta";
-import RoomCard from "@/components/shared/roomCard/Room";
-import { mockHotel, room } from "@/utils/constants";
-import HotelListItem from "@/components/shared/hotelItemCard/HotelListItem";
-import HotelGridItem from "@/components/shared/hotelItemCard/HotelGridItem";
 import React from "react";
+import HotelRoomPage from "./room";
 
 export default function Home() {
-  const medias = ["/Banner.png", "/hotel.png", "/featured.png", "/city.png"];
-
   return (
     <>
       <Meta
         title="Welcome to City Hotels"
         description="Home page of City Hotels, Nigeria"
       />
-      <div className="mx-auto my-10 w-[683px]">
-        <Carousel medias={medias} />
-      </div>
-
-      <div className="mx-7 mt-7 flex flex-col gap-4">
-        <RoomCard room={room} inverted />
-        <RoomCard room={room} />
-      </div>
-      <div className=" ml-10 mt-4 flex flex-col gap-7">
-        <HotelListItem hotel={mockHotel} featured={true} />
-        <HotelListItem hotel={mockHotel} />
-        <HotelGridItem hotel={mockHotel} />
-      </div>
+      <HotelRoomPage />
     </>
   );
 }

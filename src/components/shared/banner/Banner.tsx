@@ -50,7 +50,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
             </div>
             <Select
               classNamePrefix="select"
-              className="h-[29px] w-[220px] bg-transparent focus:outline-none"
+              className="h-[29px] w-[220px] bg-transparent text-white focus:outline-none"
               placeholder={"Where are you going ?"}
               name="city"
               options={options}
@@ -84,7 +84,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
 
             <Select
               classNamePrefix="select"
-              className="h-[29px] w-[180px] bg-transparent px-0"
+              className="h-[29px] w-[180px] bg-transparent px-0 text-white"
               defaultValue={persons[0]}
               name="guest"
               options={persons}
