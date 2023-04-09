@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { MdRoom } from "react-icons/md";
+import CalendarIcon from "@/assets/icons/calendar3.svg";
+import UserGroupIcon from "@/assets/icons/usergroup.svg";
+import LocationIcon from "@/assets/icons/location2.svg";
 import BsFillPeopleFill from "@/assets/icons/people.svg";
-import CalendarIcon from "@/assets/icons/calendar.svg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
@@ -15,9 +17,9 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
   const [endDate, setEndDate] = useState<Date | null>();
 
   const persons = [
-    { value: "3 persons", label: "3 persons" },
-    { value: "2 persons", label: "2 persons" },
-    { value: "1 person", label: "1 person" }
+    { value: "3 persons", label: "3 Persons" },
+    { value: "2 persons", label: "2 Persons" },
+    { value: "1 person", label: "1 Person" }
   ];
 
   const options = [
@@ -32,17 +34,17 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
     <div className="relative h-[669px] w-full max-w-[100vw]">
       <Img path={`${path}`} name="banner" className="h-full w-full" />
       <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center">
-        <div className="flex w-[942px] flex-col text-center align-middle">
+        <div className="flex w-full flex-col text-center align-middle lg:w-[942px]">
           <H1 className="mb-4">Explore! Discover! Live!</H1>
 
-          <H4>
+          <H4 className="hidden text-white lg:block">
             Experience the perfect getaway: Unwind and recharge in our tranquil
             retreat. Make every stay unforgettable, create lasting memories,
             immerse yourself in our warm hospitality
           </H4>
         </div>
 
-        <div className="mx-[12%] my-10 flex justify-center gap-5 p-4 align-middle backdrop-blur-sm">
+        <div className="my-10 hidden justify-center gap-5 p-4 align-middle backdrop-blur-sm lg:mx-[12%] lg:flex">
           <div className="border-r-solid border-r-2 border-[#828282] px-4">
             <div className="mb-1 flex gap-3 align-middle">
               <MdRoom className="text-white" />
@@ -58,7 +60,7 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
           </div>
 
           <div className="border-r-solid border-r-2 border-[#828282] px-4 text-center">
-            <div className="mb-2 flex gap-3 align-middle">
+            <div className="mb-2 block gap-3 align-middle lg:flex">
               <CalendarIcon className="inline text-white" />
               <P className="text-white">Check-in date &mdash; Check-out date</P>
             </div>
@@ -92,6 +94,51 @@ const Banner: React.FC<BannerProps> = ({ path }) => {
           </div>
 
           <div className="ml-10 flex items-center justify-center">
+            <Button size="lg" color="primary">
+              Search
+            </Button>
+          </div>
+        </div>
+        <div className="my-9 block lg:hidden">
+          <div className="z-0 flex h-10 gap-3 backdrop-blur-sm">
+            <LocationIcon className="w-7 text-white" />
+            <Select
+              classNamePrefix="select"
+              className="h-[29px] w-[220px] bg-transparent text-white focus:outline-none"
+              placeholder={"Destination"}
+              name="city"
+              options={options}
+            />
+          </div>
+          <div className="z-0 my-5 flex h-10 gap-3 backdrop-blur-sm">
+            <CalendarIcon className=" h-7 w-7" />
+            <div>
+              <DatePicker
+                className="z-0 w-[280px] bg-transparent  text-white"
+                selected={startDate}
+                placeholderText="Departure Date - Arrival Date"
+                onChange={(val: any) => {
+                  setStartDate(val[0]);
+                  setEndDate(val[1]);
+                }}
+                startDate={startDate}
+                endDate={endDate}
+                selectsRange
+              />
+            </div>
+          </div>
+          <div className="z-0 flex h-10 gap-3 backdrop-blur-sm">
+            <UserGroupIcon className="w-7 text-white" />
+            <Select
+              classNamePrefix="select"
+              className="h-[29px] w-[180px] bg-transparent px-0 text-white"
+              placeholder="Guests"
+              defaultValue={persons[0]}
+              name="guest"
+              options={persons}
+            />
+          </div>
+          <div className="ml-10 mt-5 flex items-center justify-center">
             <Button size="lg" color="primary">
               Search
             </Button>

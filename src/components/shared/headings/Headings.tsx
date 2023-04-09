@@ -2,7 +2,7 @@ export const H1: React.FC<JSX.IntrinsicElements["h1"]> = (props) => {
   return (
     <h1
       {...props}
-      className={`tracking font-playfair text-[50px] font-bold leading-[50px] tracking-wider text-white ${props.className}`}
+      className={`tracking font-playfair text-[30px] font-bold leading-[50px] tracking-wider text-white lg:text-[50px] ${props.className}`}
     >
       {props.children}
     </h1>

@@ -2,6 +2,8 @@
     width: 230px;
     height: 230px;
     border-radius: 6px;
+
+    @apply w-[170px] h-[170px] lg:h-[230px] lg:w-[230px]
 }
 
 .skeleton {

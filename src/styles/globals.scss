@@ -22,6 +22,12 @@ input::placeholder {
   color: inherit !important;
   padding: 0;
 }
+.select__menu,
+.select__menu-list,
+.select__option
+ {
+  z-index: 50;
+}
 
 
 
@@ -30,6 +36,7 @@ input::placeholder {
   border-bottom: 1px solid white !important;
   box-shadow: none !important;
   border-radius: 0 !important;
+  z-index: 10;
 }
 
 .select__single-value,
