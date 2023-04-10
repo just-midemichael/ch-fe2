@@ -45,7 +45,7 @@ export function TableHeader<T>({ columns }: PropsTableHeader<T>): JSX.Element {
       {columns.map((column, columnIndex) => (
         <th
           key={`table-header-${columnIndex}`}
-          className={`border-b border-[#DFE2E6] py-5  px-3 text-left font-extrabold tracking-wider text-[#243757]`}
+          className={`border-b border-[#DFE2E6] bg-[#F2F2F2] px-3  py-2 text-left font-extrabold tracking-wider text-[#243757]`}
           style={{ width: `${column.width}` }}
         >
           <div className="flex cursor-pointer items-center justify-start text-sm">
@@ -116,7 +116,7 @@ export function Table<T>({
   return (
     <div>
       <div className="relative rounded-md border border-[#EBEDF0] shadow-md">
-        <div ref={headerComponentRef} className="px-5">
+        <div ref={headerComponentRef} className="p-5">
           {headerComponent}
         </div>
         {isLoading && (
@@ -132,7 +132,7 @@ export function Table<T>({
             </div>
           </div>
         )}
-        <table className="table h-auto w-full table-auto border-none">
+        <table className="table h-auto w-full table-auto border-none p-3">
           <thead>
             <TableHeader columns={header} />
           </thead>
