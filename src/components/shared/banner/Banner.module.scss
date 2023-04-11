@@ -6,3 +6,7 @@
     background-repeat: no-repeat;
 }
 
+
+.roomBase {
+    @apply  h-[150px] lg:h-[267px] relative;
+}

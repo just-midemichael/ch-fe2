@@ -8,15 +8,16 @@ import styles from "./City.module.scss";
 const City: FC<ImageProps> = ({ className, path }) => {
   return (
     <div className={`${className}`}>
-      <div className="relative">
+      <div className={`relative ${styles.base}`}>
         <Img
           path={`${path}`}
           name="city"
-          className={`${styles.base} ${styles.skeleton}`}
+          className={`h-full w-full ${styles.skeleton}`}
         />
-
-        <div className="absolute left-[44%] top-[50%] rounded-full bg-[#FE8501] p-[5px]">
-          <GoLocation className=" h-full w-[22px] cursor-pointer text-white" />
+        <div className="absolute top-0 flex h-full w-full items-center justify-center">
+          <div className="rounded-full bg-[#FE8501] p-[5px]">
+            <GoLocation className=" h-full w-[22px] cursor-pointer text-white" />
+          </div>
         </div>
       </div>
 

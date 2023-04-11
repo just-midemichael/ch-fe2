@@ -2,7 +2,7 @@ export const H1: React.FC<JSX.IntrinsicElements["h1"]> = (props) => {
   return (
     <h1
       {...props}
-      className={`tracking font-playfair text-[50px] font-bold leading-[50px] tracking-wider text-white ${props.className}`}
+      className={`tracking font-playfair text-[30px] font-bold leading-[50px] tracking-wider text-white lg:text-[50px] ${props.className}`}
     >
       {props.children}
     </h1>
@@ -35,7 +35,7 @@ export const H4: React.FC<JSX.IntrinsicElements["h4"]> = (props) => {
   return (
     <h4
       {...props}
-      className={`font-poppins text-[20px] font-medium leading-[35px] text-white ${props.className}`}
+      className={`font-poppins text-[20px] font-medium leading-[35px]  ${props.className}`}
     >
       {props.children}
     </h4>
