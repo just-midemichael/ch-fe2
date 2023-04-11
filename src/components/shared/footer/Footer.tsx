@@ -17,7 +17,7 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
     <footer>
       {subscription && (
         <div className={styles.socials}>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center gap-2 lg:justify-start">
             <HiOutlineMailOpen className="text-[4rem] text-primary400" />
             <div>
               <P className="text-white">Subscribe our Newletter</P>
@@ -27,7 +27,7 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
             </div>
           </div>
 
-          <div className="my-5 items-center md:flex md:gap-8 lg:gap-16">
+          <div className="my-5 items-center md:gap-8 lg:flex lg:gap-16">
             <Input
               className="rounded-[46px] border-none bg-grey70 text-white"
               placeholder="Your email address"
@@ -40,24 +40,24 @@ const Footer: FC<FooterProps> = ({ subscription = true }) => {
                 </Button>
               }
             />
+          </div>
 
-            <div className="mt-5 flex  items-center justify-center gap-2">
-              <span className={styles.social_icons_container}>
-                <FaFacebookF className={styles.social_icons} />
-              </span>
+          <div className="mt-5 flex  items-center justify-center gap-2">
+            <span className={styles.social_icons_container}>
+              <FaFacebookF className={styles.social_icons} />
+            </span>
 
-              <span className={styles.social_icons_container}>
-                <AiOutlineTwitter className={styles.social_icons} />
-              </span>
+            <span className={styles.social_icons_container}>
+              <AiOutlineTwitter className={styles.social_icons} />
+            </span>
 
-              <span className={styles.social_icons_container}>
-                <TfiPinterest className={styles.social_icons} />
-              </span>
+            <span className={styles.social_icons_container}>
+              <TfiPinterest className={styles.social_icons} />
+            </span>
 
-              <span className={styles.social_icons_container}>
-                <AiOutlineInstagram className={styles.social_icons} />
-              </span>
-            </div>
+            <span className={styles.social_icons_container}>
+              <AiOutlineInstagram className={styles.social_icons} />
+            </span>
           </div>
         </div>
       )}
