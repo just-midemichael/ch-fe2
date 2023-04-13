@@ -15,7 +15,7 @@ const RoomCard: FC<RoomProps> = ({ className, room, inverted }) => {
   return (
     <div className={`${inverted ? style.inverted : ""} ${className}`}>
       <div className={style.base}>
-        <div className={`md:relative ${style.imgCard}`}>
+        <div className={`relative ${style.imgCard}`}>
           <Img
             className={`${style.skeleton} ${style.img}`}
             path={`${room.Medias.find((item) => item.Type === 2)?.Path}`}

@@ -1,0 +1,11 @@
+.profile {
+    @apply w-[156px] h-[156px] rounded-full
+}
+
+.ratings {
+    @apply w-[114px] h-[23px] my-2
+}
+
+.icons {
+    @apply flex items-center gap-8 text-[22px] mt-2
+}
