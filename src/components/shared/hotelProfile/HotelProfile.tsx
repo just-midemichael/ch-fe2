@@ -3,6 +3,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 import { TfiPinterest } from "react-icons/tfi";
 import Link from "next/link";
+import Rating from "@/assets/icons/rating.svg";
 import type HotelProf from "./HotelProfile.props";
 import Img from "../images/Image";
 import { H4, P } from "../headings/Headings";
@@ -18,7 +19,7 @@ const HotelProfile: FC<HotelProf> = () => {
       />
       <div>
         <H4 className="font-black">Rand Royale Hotel</H4>
-        <Img path="/4-star.png" name="ratings" className={styles.ratings} />
+        <Rating className={styles.ratings} />
         <div className="flex items-baseline gap-2">
           <P>8/10</P>
           <ul className="list-disc">

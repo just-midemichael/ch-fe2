@@ -11,12 +11,14 @@ import Hotel from "@/components/shared/hotelCard/Hotel";
 import { mockHotel, room } from "@/utils/constants";
 import RoomCard from "@/components/shared/roomCard/Room";
 import Map from "@/components/shared/map/Map";
+import Navbar from "@/components/shared/navbar/Navbar";
 import Profile from "../components/shared/hotelProfile/HotelProfile";
 
 export default function hotelPage() {
   return (
     <div className="lg:overflow-x-hidden">
-      <div className="px-4 md:px-0">
+      <Navbar theme="light" />
+      <div className="mt-9 px-4 md:px-0">
         <div className="relative md:w-[150vw] md:bg-[#FFF9F6] md:px-14 md:py-16">
           <Profile />
 
