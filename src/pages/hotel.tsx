@@ -1,160 +1,173 @@
-import React from "react";
+import React, { useState } from "react";
 import Main from "@/layout/main/Main";
-import { H3, H33, H4, P } from "@/components/shared/headings/Headings";
+import { H3, H4, P } from "@/components/shared/headings/Headings";
 import HorizontalScroll from "@/components/shared/horizontalScroll/HorizontalScroll";
-import { GoLocation } from "react-icons/go";
-import { RiParkingBoxFill } from "react-icons/ri";
-import { MdRoomService, MdOutlineBreakfastDining } from "react-icons/md";
-import { FaSwimmingPool } from "react-icons/fa";
-import { BiWifi } from "react-icons/bi";
-import Hotel from "@/components/shared/hotelCard/Hotel";
-import { mockHotel, room } from "@/utils/constants";
+
+import WifiIcon from "@/assets/icons/wifi.svg";
+import LocationIcon from "@/assets/icons/location.svg";
+import SwimmingPoolIcon from "@/assets/icons/swimming-pool.svg";
+import CoffeIcon from "@/assets/icons/coffee.svg";
+import ParkingIcon from "@/assets/icons/parking2.svg";
+import RoomServiceIcon from "@/assets/icons/room.svg";
+import { room } from "@/utils/constants";
 import RoomCard from "@/components/shared/roomCard/Room";
 import Map from "@/components/shared/map/Map";
 import Navbar from "@/components/shared/navbar/Navbar";
+import HotelFacilityCard from "@/components/hotel/hotelFacilityCard/HotelFacilityCard";
+// import Img from "@/components/shared/images/Image";
+import HotelImageCard from "@/components/hotel/hotelImageCard/HotelImageCard";
+import Modal from "@/components/shared/modal/Modal";
+import Carousel from "@/components/shared/carousel/Carousel";
 import Profile from "../components/shared/hotelProfile/HotelProfile";
+// import { IHotel } from "@/services/hotel/payload";
 
-export default function hotelPage() {
+export const HotelPage: React.FC = () => {
+  const [showImagesModal, setShowImagesModal] = useState(false);
+  const medias = ["/Banner.png", "/hotel.png", "/featured.png", "/city.png"];
+  // const hotel: IHotel = mockHotel;
   return (
     <div className="lg:overflow-x-hidden">
       <Navbar theme="light" />
-      <div className="mt-9 px-4 md:px-0">
-        <div className="relative md:w-[150vw] md:bg-[#FFF9F6] md:px-14 md:py-16">
+
+      <Main>
+        <div className="app__container relative mt-9 flex h-[230px] w-full  justify-between md:bg-[#FFF9F6] md:py-16 lg:h-[300px]">
+          {/* {hotel.Banner && (
+            <Img
+              className="absolute h-full w-full"
+              path={hotel.Banner.Path}
+              name={`${hotel.Name} Banner`}
+            />
+          )} */}
           <Profile />
-
-          <Map />
+          <div>
+            <Map />
+          </div>
         </div>
+        <div className="app__container ">
+          <div className="mb-9 md:w-[540px]">
+            <H4 className="mt-5 font-semibold">About Grand and Royale Hotel</H4>
+            <hr className="md:border-bottom my-3 md:border-[#C2C2C2] " />
+            <P className="leading-[34px]">
+              The Grand Royale Hotel is a luxurious five-star hotel located in
+              the heart of the city. With its stunning architecture and
+              exquisite interior design, the hotel is a favorite among guests
+              who seek comfort, elegance, and top-notch service.
+            </P>
 
-        <div className="mb-9 md:w-[540px] md:pl-14">
-          <H4 className="my-3 font-black">About Grand and Royale Hotel</H4>
-          <hr className="md:border md:border-[#C2C2C2]" />
-          <P className="leading-[34px]">
-            The Grand Royale Hotel is a luxurious five-star hotel located in the
-            heart of the city. With its stunning architecture and exquisite
-            interior design, the hotel is a favorite among guests who seek
-            comfort, elegance, and top-notch service.
-          </P>
+            <P className="mt-5 hidden leading-[34px] md:block">
+              The hotel features 250 well-appointed rooms and suites, each
+              designed to offer a luxurious stay experience. All rooms are
+              equipped with modern amenities such as flat-screen TVs, high-speed
+              internet, and luxurious bedding.
+            </P>
+            <P className="mt-5 text-[#FE8501] underline">Show more</P>
+          </div>
 
-          <P className="mt-5 hidden leading-[34px] md:block">
-            The hotel features 250 well-appointed rooms and suites, each
-            designed to offer a luxurious stay experience. All rooms are
-            equipped with modern amenities such as flat-screen TVs, high-speed
-            internet, and luxurious bedding.
-          </P>
-          <P className="text-[#FE8501] underline">Show more</P>
-        </div>
-      </div>
+          <div className="flex flex-col gap-9 md:mt-[70px] md:w-[150vw] lg:w-auto">
+            <div>
+              <HorizontalScroll title="Hotel Facilities">
+                <div className="flex gap-4">
+                  <HotelFacilityCard
+                    title="Pick Up & Drop"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={LocationIcon}
+                  />
 
-      <div className="flex flex-col gap-9 pl-8 md:mt-[200px] md:w-[150vw] lg:w-auto">
-        <HorizontalScroll title="Hotel Facilities" showPagination>
-          <div className="flex gap-7">
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">
-                Pick Up & Drop
-              </H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <GoLocation className="text-[40px] text-[#FE8501]" />
-              </div>
+                  <HotelFacilityCard
+                    title="Parking Space"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={RoomServiceIcon}
+                  />
+                  <HotelFacilityCard
+                    title="Room Service"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={ParkingIcon}
+                  />
+                  <HotelFacilityCard
+                    title="Swimming Pool"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={SwimmingPoolIcon}
+                  />
+                  <HotelFacilityCard
+                    title="Breakfast"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={CoffeIcon}
+                  />
+                  <HotelFacilityCard
+                    title="Fibre Internet"
+                    description="We’ll pick up from airport while you comfy on your ride,
+                      mus nellentesque habitant."
+                    Icon={WifiIcon}
+                  />
+                </div>
+              </HorizontalScroll>
+              <P className="mt-5 text-[#FE8501] underline">See all</P>
             </div>
 
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">
-                Parking Space
-              </H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <RiParkingBoxFill className="text-[40px] text-[#FE8501]" />
+            <HorizontalScroll title="Hotel Gallery">
+              <div className="flex gap-3">
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
+                <HotelImageCard
+                  path="/hotel.png"
+                  onClick={() => setShowImagesModal(true)}
+                />
               </div>
-            </div>
+            </HorizontalScroll>
+          </div>
 
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">Room Service</H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <MdRoomService className="text-[40px] text-[#FE8501]" />
-              </div>
-            </div>
-
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">
-                Swimming Pool
-              </H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <FaSwimmingPool className="text-[40px] text-[#FE8501]" />
-              </div>
-            </div>
-
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">
-                Fibre Internet
-              </H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <BiWifi className="text-[40px] text-[#FE8501]" />
-              </div>
-            </div>
-
-            <div className="w-[280px] border border-[#C2C2C2] p-4">
-              <H33 className="mb-2 font-playfair text-[20px]">Breakfast</H33>
-              <div className="flex items-end gap-2">
-                <P className="max-w-[180px] text-[12px]">
-                  We’ll pick up from airport while you comfy on your ride, mus
-                  nellentesque habitant.
-                </P>
-                <MdOutlineBreakfastDining className="text-[40px] text-[#FE8501]" />
-              </div>
+          <div className="mt-14">
+            <H3 className="mb-7">Available Room</H3>
+            <div className="flex flex-col gap-16">
+              <RoomCard room={room} inverted />
+              <RoomCard room={room} />
+              <RoomCard room={room} inverted />
+              <RoomCard room={room} />
+              <RoomCard room={room} inverted />
             </div>
           </div>
-        </HorizontalScroll>
-
-        <HorizontalScroll title="Hotel Gallery">
-          <div className="flex gap-3">
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-            <Hotel hotel={mockHotel} path="/hotel.png" />
-          </div>
-        </HorizontalScroll>
-      </div>
-
-      <div className="mt-9 px-7">
-        <H3 className="mb-5">Available Room</H3>
-        <div className="mb-9 flex flex-col gap-9">
-          <RoomCard room={room} inverted />
-          <RoomCard room={room} />
-          <RoomCard room={room} inverted />
-          <RoomCard room={room} />
-          <RoomCard room={room} inverted />
         </div>
-      </div>
-      <Main></Main>
+        <Modal
+          openModal={showImagesModal}
+          setOpenModal={setShowImagesModal}
+          variant="plain"
+        >
+          <section>
+            <div className="">
+              <Carousel medias={medias} autoSlide />
+            </div>
+          </section>
+        </Modal>
+      </Main>
     </div>
   );
-}
+};
+
+export default HotelPage;
