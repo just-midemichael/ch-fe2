@@ -74,7 +74,7 @@ const index = () => {
       <div>
         <Table
           headerComponent={
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between pr-24">
               <P className="text-[16px]">History</P>
               <Link href={"/user/history"}>View all </Link>
             </div>
