@@ -31,6 +31,17 @@ export const H3: React.FC<JSX.IntrinsicElements["h3"]> = (props) => {
   );
 };
 
+export const H33: React.FC<JSX.IntrinsicElements["h3"]> = (props) => {
+  return (
+    <h3
+      {...props}
+      className={`font-playfair text-[20px] font-bold leading-[40px] tracking-wide text-black  ${props.className}`}
+    >
+      {props.children}
+    </h3>
+  );
+};
+
 export const H4: React.FC<JSX.IntrinsicElements["h4"]> = (props) => {
   return (
     <h4
