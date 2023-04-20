@@ -13,13 +13,13 @@ const Hotel: FC<HotelProps> = ({
   featured,
   info,
   favourite,
-  path
+  hotel
 }) => {
   return (
     <div className={`relative ${styles.base}  ${className}`}>
       <Img
         id="pic"
-        path={`${path}`}
+        path={`${hotel.Medias[0]?.Path}`}
         name="hotel"
         className={`${styles.base} ${styles.skeleton}`}
       />

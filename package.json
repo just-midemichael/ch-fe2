@@ -26,6 +26,7 @@
     "eslint-config-next": "13.1.6",
     "eslint-plugin-prettier": "^4.2.1",
     "formik": "^2.2.9",
+    "google-map-react": "^2.2.0",
     "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "next": "13.1.6",
