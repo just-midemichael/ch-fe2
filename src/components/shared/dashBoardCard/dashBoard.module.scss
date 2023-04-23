@@ -9,6 +9,6 @@
 }
 
 .container {
-   @apply flex items-center justify-between gap-3 w-[323px] h-[168px] bg-[#FFF] py-11 px-8 rounded-md
+   @apply flex items-center justify-between gap-3 md:w-[270px] lg:w-[323px] lg:h-[168px] bg-[#FFF] py-11 px-8 rounded-md
 }
 
