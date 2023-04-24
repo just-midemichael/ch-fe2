@@ -1,41 +1,32 @@
 import Button from "@/components/shared/button/Button";
+import { H4, Label } from "@/components/shared/headings/Headings";
 import Input from "@/components/shared/input/Input";
 
 const Account = () => {
   return (
-    <div className="ml-[60px] w-full max-w-screen-md">
-      <h1 className="ml-8">Account Settings</h1>
-      <hr className="mt-6" />
-      <div className="flex flex-col md:flex-row">
-        <div className="mb-8 md:mb-0">
-          <div className="pl-8 md:w-96">
+    <div className="max-w-[984px] rounded-md border border-[#F3F4F6] bg-white py-6 shadow ">
+      <H4 className="px-6">Account Settings</H4>
+      <hr className="my-4" />
+      <div className="flex flex-col px-6 md:flex-row">
+        <div className="order-2 basis-3/5 md:order-1">
+          <div className="mt-5 flex w-full flex-col gap-4 md:mt-0">
             <Input label="First Name" />
             <Input label="Last Name" />
             <Input label="Email" />
             <Input label="Phone" />
           </div>
-          <Button
-            className="ml-8 mt-8 w-80"
-            type="submit"
-            color="primary"
-            size="lg"
-          >
-            Save Changes
-          </Button>
+          <div className="my-4 text-center md:text-right">
+            <Button type="submit" color="primary" size="lg">
+              Save Changes
+            </Button>
+          </div>
         </div>
 
-        <div className="md:ml-24">
-          <div className="ml-8 mt-8 h-52 w-52 rounded-full bg-gray-400 md:ml-20 md:mt-20"></div>
-          <div className="ml-4 mt-3 md:ml-0">
-            <Button
-              className="ml-8 w-64 md:ml-20"
-              type="button"
-              color="media"
-              size="lg"
-            >
-              <label htmlFor="imageUpload">
-                <h2 className="flex items-center ">Choose Image</h2>
-              </label>
+        <div className="order-1 basis-2/5 text-center md:order-2 md:ml-24">
+          <div className=" mx-auto mt-8 h-52 w-52 rounded-full  bg-gray-400"></div>
+          <div className="mt-5 md:ml-0">
+            <Button type="button" color="media" size="lg" outline>
+              <Label htmlFor="imageUpload">Choose Image</Label>
               <input id="imageUpload" type="file" className="hidden" />
             </Button>
           </div>

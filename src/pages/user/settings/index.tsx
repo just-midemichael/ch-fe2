@@ -9,7 +9,9 @@ function index() {
   return (
     <UserDashboardLayout>
       <Account />
-      <Billing />
+      <div className="my-6">
+        <Billing />
+      </div>
       <Password />
     </UserDashboardLayout>
   );

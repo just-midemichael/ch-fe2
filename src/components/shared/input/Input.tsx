@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import EyeOpenIcon from "@/assets/icons/eye-open.svg";
+import EyeOffIcon from "@/assets/icons/eye-off.svg";
 import styles from "./Input.module.scss";
 import type InputProps from "./Input.props";
 
@@ -18,7 +19,7 @@ const Input: React.FC<InputProps> = ({
     <div className="relative">
       {label && (
         <label htmlFor={name}>
-          <div className="py-4">{label}</div>
+          <div className="pb-4">{label}</div>
         </label>
       )}
 
@@ -32,11 +33,11 @@ const Input: React.FC<InputProps> = ({
             placeholder={placeholder}
             {...rest}
           />
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+          <div className="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-2">
             {mode === "password" ? (
-              <AiFillEyeInvisible onClick={() => setMode("text")} />
+              <EyeOpenIcon onClick={() => setMode("text")} />
             ) : (
-              <AiFillEye onClick={() => setMode("password")} />
+              <EyeOffIcon onClick={() => setMode("password")} />
             )}
           </div>
         </div>
