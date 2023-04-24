@@ -6,11 +6,11 @@ import Main from "../main/Main";
 const UserDashboardLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Main>
-      <div className="flex">
+      <div className="flex gap-6">
         <div className="w-[315px]">
           <Sidenav />
         </div>
-        <div className="w-full">{children}</div>
+        <div className="min-h-[80vh] w-full">{children}</div>
       </div>
     </Main>
   );
