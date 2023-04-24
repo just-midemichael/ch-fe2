@@ -6,6 +6,7 @@ import match from "../../../utils/match";
 const Button: FC<PropsWithChildren<ButtonProps>> = ({
   size = "",
   color = "primary",
+  outline,
   children,
   className,
   ...rest
@@ -33,7 +34,7 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
       aria-label={rest.title}
       className={`
       ${buttonSize}
-      ${variant} ${className} 
+      ${variant} ${outline ? styles.variants__outline : ""} ${className} 
     
     `}
       {...rest}

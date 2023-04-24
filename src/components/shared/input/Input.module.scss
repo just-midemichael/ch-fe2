@@ -1,5 +1,5 @@
 .input_container {
-  @apply flex border h-[48px] border-grey30  focus-within:border-primary400;
+  @apply flex border rounded-md h-[48px] border-grey30  focus-within:border-primary400;
 }
 
 .input {
