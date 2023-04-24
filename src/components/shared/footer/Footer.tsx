@@ -14,7 +14,7 @@ import type FooterProps from "./Footer.props";
 
 const Footer: FC<FooterProps> = ({ subscription = true }) => {
   return (
-    <footer>
+    <footer className="md:w-[152vw] lg:w-[100vw] ">
       {subscription && (
         <div className={styles.socials}>
           <div className="flex items-center justify-center gap-2 lg:justify-start">
