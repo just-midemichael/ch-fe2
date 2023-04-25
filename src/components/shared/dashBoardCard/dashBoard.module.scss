@@ -1,0 +1,14 @@
+.icon {
+    @apply bg-[#FFF7F1] rounded-full w-[60px] h-[60px] flex items-center justify-center 
+}
+
+.coloredSvg {
+    path {
+        fill:#FE8501
+    }
+}
+
+.container {
+   @apply flex items-center justify-between gap-3 md:w-[270px] lg:w-[323px] lg:h-[168px] bg-[#FFF] py-11 px-8 rounded-md
+}
+
