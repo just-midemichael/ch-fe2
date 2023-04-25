@@ -25,10 +25,10 @@ export default function Home() {
           <H3>Explore Cities</H3>
           <P>Aliquam lacinia diam quis lacus euismod</P>
           <div className="mt-12 grid grid-cols-2 gap-2 md:grid-cols-4">
-            <City path="" />
-            <City path="" />
-            <City path="" />
-            <City path="" />
+            <City state="" country="" path="" />
+            <City state="" country="" path="" />
+            <City state="" country="" path="" />
+            <City state="" country="" path="" />
           </div>
           <div className="mt-[100px]">
             <HorizontalScroll
